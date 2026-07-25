@@ -10,9 +10,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-md bg-white/10 ring-1 ring-white/25">
-                <Sparkles className="h-5 w-5 text-[#7FB3E8]" />
-              </span>
+              <img src="/images/logo.png" alt="AYSENT SMART FILM" className="h-9 w-auto" />
               <span className="text-[15px] font-extrabold tracking-wide">{BRAND.name}</span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-white/65">
