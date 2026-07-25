@@ -110,7 +110,15 @@ export function Counter({ value, suffix = "", className }: CounterProps) {
   const spring = useSpring(mv, { duration: 2.2, bounce: 0 });
 
   useEffect(() => {
-    if (inView) mv.set(value);
+    if (!inView) return;
+    mv.set(value);
+    // 保底：动画时长(2.2s) + 缓冲后，强制写入最终值
+    const timer = setTimeout(() => {
+      if (ref.current) {
+        ref.current.textContent = value.toLocaleString("en-US");
+      }
+    }, 2600);
+    return () => clearTimeout(timer);
   }, [inView, mv, value]);
 
   useEffect(() => {
