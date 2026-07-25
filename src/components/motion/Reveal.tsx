@@ -105,33 +105,65 @@ interface CounterProps {
 
 export function Counter({ value, suffix = "", className }: CounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-40px" });
-  const mv = useMotionValue(0);
-  const spring = useSpring(mv, { duration: 2.2, bounce: 0 });
+  const wrapRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    if (!inView) return;
-    mv.set(value);
-    // 保底：动画时长(2.2s) + 缓冲后，强制写入最终值
-    const timer = setTimeout(() => {
-      if (ref.current) {
-        ref.current.textContent = value.toLocaleString("en-US");
-      }
-    }, 2600);
-    return () => clearTimeout(timer);
-  }, [inView, mv, value]);
+    const el = ref.current;
+    const wrap = wrapRef.current;
+    if (!el || !wrap) return;
 
-  useEffect(() => {
-    const unsub = spring.on("change", (v) => {
-      if (ref.current) {
-        ref.current.textContent = Math.round(v).toLocaleString("en-US");
+    const finalText = value.toLocaleString("en-US");
+    const DURATION = 2200;
+    let raf = 0;
+    let started = false;
+
+    const render = (n: number) => {
+      el.textContent = Math.round(n).toLocaleString("en-US");
+    };
+
+    const run = () => {
+      if (started) return;
+      started = true;
+      const t0 = performance.now();
+      const tick = (now: number) => {
+        const p = Math.min((now - t0) / DURATION, 1);
+        // ease-out 缓动，先快后慢
+        render(value * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) raf = requestAnimationFrame(tick);
+        else el.textContent = finalText; // 确保最终值精确
+      };
+      raf = requestAnimationFrame(tick);
+    };
+
+    // 用原生 IntersectionObserver，兼容性最好
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          run();
+          io.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    io.observe(wrap);
+
+    // 双保险：3 秒后无论是否进入视口都直接显示最终值
+    const fallback = setTimeout(() => {
+      if (!started) {
+        started = true;
+        el.textContent = finalText;
       }
-    });
-    return unsub;
-  }, [spring]);
+    }, 3000);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      clearTimeout(fallback);
+      io.disconnect();
+    };
+  }, [value]);
 
   return (
-    <span className={`whitespace-nowrap ${className ?? ""}`}>
+    <span ref={wrapRef} className={`whitespace-nowrap ${className ?? ""}`}>
       <span ref={ref}>0</span>
       {suffix && <span className="text-[0.5em] font-bold">{suffix}</span>}
     </span>

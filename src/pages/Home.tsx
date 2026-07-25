@@ -169,7 +169,7 @@ export default function Home() {
             >
               {STATS.slice(0, 3).map((s) => (
                 <div key={s.label} className="min-w-0">
-                  <dd className="text-xl font-extrabold tracking-tight text-[#9CC4EC] sm:text-4xl md:text-4xl">
+                  <dd className="text-xl font-extrabold tracking-tight text-[#9CC4EC] sm:text-3xl md:text-4xl">
                     <Counter value={s.value} suffix={s.suffix} />
                   </dd>
                   <dt className="mt-1.5 text-[13px] leading-snug text-white/60 sm:text-xs md:text-sm">{s.label}</dt>
