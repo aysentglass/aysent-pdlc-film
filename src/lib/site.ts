@@ -3,11 +3,11 @@
 export const BRAND = {
   name: "AYSENT SMART FILM",
   tagline: "Privacy on Demand, Quality from the Source Factory",
-  email: "sales@aysentsmartfilm.com",
-  whatsapp: "+86-138-0000-0000",
-  phone: "+86-138-0000-0000",
+  email: "aysentglass@aysentsmartfilm.com",
+  whatsapp: "+86-153-1806-6188",
+  phone: "+86-153-1806-6188",
   address:
-    "No. 88 Industrial Avenue, Foshan City, Guangdong Province, China (placeholder address)",
+    "Headquarters Building of Huantou Center, No. 1728, Shanguo South Road, Jinghe Sub-district, Tengzhou City, Zaozhuang City, Shandong Province， China",
   workingHours: "Monday – Saturday, 8:30 – 18:30 (GMT+8)",
   responsePromise: "We respond to every inquiry within 24 hours.",
 };
