@@ -12,6 +12,7 @@ import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
 import Contact from "@/pages/Contact";
 import Admin from "@/pages/Admin";
+import WhatsAppFloat from "@/components/WhatsAppFloat"; 
 
 function ScrollManager() {
   const { pathname, hash } = useLocation();
@@ -50,6 +51,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 }

@@ -3,7 +3,7 @@
 export const BRAND = {
   name: "AYSENT SMART FILM",
   tagline: "Privacy on Demand, Quality from the Source Factory",
-  email: "aysentglass@aysentsmartfilm.com",
+  email: "aysentglass@aysentglass.com",
   whatsapp: "+86-153-1806-6188",
   phone: "+86-153-1806-6188",
   address:
