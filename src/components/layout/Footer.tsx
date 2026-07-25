@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Mail, MapPin, Phone, Sparkles } from "lucide-react";
+import { Mail, MapPin, Phone, } from "lucide-react";
 import { BRAND, NAV_ITEMS, PRODUCTS } from "@/lib/site";
 
 export default function Footer() {
