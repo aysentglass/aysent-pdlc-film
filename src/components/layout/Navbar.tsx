@@ -26,16 +26,14 @@ export default function Navbar() {
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5 text-white" aria-label="AYSENT SMART FILM home">
-          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-white/10 ring-1 ring-white/25">
-            <Sparkles className="h-5 w-5 text-[#7FB3E8]" />
-          </span>
-          <span className="leading-tight">
-            <span className="block text-[15px] font-extrabold tracking-wide">{BRAND.name}</span>
-            <span className="block text-[10px] font-medium uppercase tracking-[0.18em] text-white/60">
-              Smart Film Manufacturer
-            </span>
-          </span>
-        </Link>
+  <img src="/images/logo.png" alt="AYSENT SMART FILM" className="h-9 w-auto" />
+  <span className="leading-tight">
+    <span className="block text-[15px] font-extrabold tracking-wide">{BRAND.name}</span>
+    <span className="block text-[10px] font-medium uppercase tracking-[0.18em] text-white/60">
+      Smart Film Manufacturer
+    </span>
+  </span>
+</Link>
 
         {/* Desktop menu */}
         <ul className="hidden items-center gap-1 lg:flex">
