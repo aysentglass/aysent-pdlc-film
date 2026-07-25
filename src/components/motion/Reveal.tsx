@@ -1,5 +1,5 @@
-import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useRef, type ReactNode } from "react";
+import { motion } from "framer-motion";
+import { type ReactNode } from "react";
 
 /* ---------- Scroll reveal wrapper ---------- */
 
