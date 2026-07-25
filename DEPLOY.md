@@ -28,7 +28,7 @@ git push -u origin main
 |---|---|---|
 | `POSTGRES_URL` | Yes* | Connection string of Vercel Postgres (Storage → Create Database → Postgres). |
 | `SUPABASE_URL` + `SUPABASE_SERVICE_KEY` | Yes* | Alternative to Postgres: use a free Supabase project instead. |
-| `ADMIN_KEY` | Yes | Password for the `/admin` page and admin API. Choose a strong random string. |
+| `Ast147852` | Yes | Password for the `/admin` page and admin API. Choose a strong random string. |
 | `RESEND_API_KEY` | Recommended | API key from https://resend.com for email notifications. |
 | `NOTIFY_EMAIL` | Recommended | Where inquiry notification emails are sent, e.g. `sales@aysentsmartfilm.com`. |
 | `FROM_EMAIL` | Optional | Sender address. Default: `AYSENT Website <onboarding@resend.dev>` (Resend test domain — works immediately). For a custom sender like `noreply@yourdomain.com`, verify the domain in Resend first. |
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS inquiries (
 ## 5. Done — How It Works
 
 - A visitor submits any inquiry form → `POST /api/inquiry` → saved to the `inquiries` table → notification email sent via Resend (email failures never block the visitor).
-- You open **https://your-domain.com/admin**, enter your `ADMIN_KEY`, and see every inquiry with name, company, email, country, requirements and submission time.
+- You open **https://your-domain.com/admin**, enter your `Ast147852`, and see every inquiry with name, company, email, country, requirements and submission time.
 - **Export CSV** button downloads all inquiries (Excel-friendly UTF-8).
 
 ## 6. Local Development (optional)
