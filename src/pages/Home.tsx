@@ -36,9 +36,10 @@ const STATS = [
 ];
 
 const CERTS = [
-  { name: "ISO9001", desc: "Quality management system certified factory" },
-  { name: "CE", desc: "Compliant with European safety standards" },
-  { name: "RoHS", desc: "Restriction of hazardous substances certified" },
+  { name: "ISO9001", image: "/images/cert-iso9001.jpg", desc: "Quality management system certified factory" },
+  { name: "CE",  image: "/images/cert-ce.jpg", desc: "Compliant with European safety standards" },
+  { name: "CE",  image: "/images/cert-ce.jpg", desc: "Compliant with European safety standards" },
+  { name: "RoHS", image: "/images/cert-rohs.jpg", desc: "Restriction of hazardous substances certified" },
 ];
 
 const OEM_STEPS = ["Requirements", "Sampling", "Confirmation", "Mass Production", "Delivery"];
@@ -425,6 +426,7 @@ export default function Home() {
                       label={`${c.name} Certificate`}
                       size="800×1000"
                       ratio="aspect-[4/5]"
+                      src={c.image}
                       className="shine transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
