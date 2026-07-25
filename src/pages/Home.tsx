@@ -162,17 +162,17 @@ export default function Home() {
             </motion.div>
             {/* hero stats strip */}
             <motion.dl
-              className="mt-14 grid grid-cols-3 gap-6 border-t border-white/15 pt-8"
+              className="mt-14 grid grid-cols-3 gap-3 sm:gap-6 border-t border-white/15 pt-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.9, delay: 0.9 }}
             >
               {STATS.slice(0, 3).map((s) => (
-                <div key={s.label}>
-                  <dd className="text-3xl font-extrabold tracking-tight text-[#9CC4EC] md:text-4xl">
+                <div key={s.label} className="min-w-0">
+                  <dd className="text-xl font-extrabold tracking-tight text-[#9CC4EC] sm:text-3xl md:text-4xl">
                     <Counter value={s.value} suffix={s.suffix} />
                   </dd>
-                  <dt className="mt-1.5 text-xs text-white/60 md:text-sm">{s.label}</dt>
+                  <dt className="mt-1.5 text-[11px] leading-snug text-white/60 sm:text-xs md:text-sm">{s.label}</dt>
                 </div>
               ))}
             </motion.dl>
