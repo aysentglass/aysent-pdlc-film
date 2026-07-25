@@ -172,7 +172,7 @@ export default function Home() {
                   <dd className="text-xl font-extrabold tracking-tight text-[#9CC4EC] sm:text-3xl md:text-4xl">
                     <Counter value={s.value} suffix={s.suffix} />
                   </dd>
-                  <dt className="mt-1.5 text-[13px] leading-snug text-white/60 sm:text-xs md:text-sm">{s.label}</dt>
+                  <dt className="mt-1.5 text-[16px] leading-snug text-white/60 sm:text-xs md:text-sm">{s.label}</dt>
                 </div>
               ))}
             </motion.dl>
