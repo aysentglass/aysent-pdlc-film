@@ -6,6 +6,7 @@ export const BRAND = {
   email: "aaronliu@aysentglass.com",
   whatsapp: "+86-151-6320-6027",
   phone: "+86-151-6320-6027",
+  wechat: "+86-151-6320-6027",   // 改成你的真实微信号
   address:
     "Headquarters Building of Huantou Center, No. 1728, Shanguo South Road, Jinghe Sub-district, Tengzhou City, Zaozhuang City, Shandong Province， China",
   workingHours: "Monday – Saturday, 8:30 – 18:30 (GMT+8)",

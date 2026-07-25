@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { X } from "lucide-react";
+import { X, MessageCircle, Copy, Check } from "lucide-react";
 import { BRAND } from "@/lib/site";
 
 /** WhatsApp number for wa.me deep links: digits only, with country code. */
 const WA_NUMBER = BRAND.whatsapp.replace(/[^\d]/g, "");
+const WECHAT_ID = (BRAND as any).wechat ?? "aysent-smartfilm";
 
 function WhatsAppIcon({ className = "" }: { className?: string }) {
   return (
@@ -13,51 +14,66 @@ function WhatsAppIcon({ className = "" }: { className?: string }) {
   );
 }
 
+type Panel = "whatsapp" | "wechat" | null;
+
 export default function WhatsAppFloat() {
-  const [open, setOpen] = useState(false);
+  const [panel, setPanel] = useState<Panel>(null);
   const [message, setMessage] = useState("");
+  const [copied, setCopied] = useState(false);
 
   const chatUrl = `https://wa.me/${WA_NUMBER}${
     message.trim() ? `?text=${encodeURIComponent(message.trim())}` : ""
   }`;
 
+  const toggle = (p: Exclude<Panel, null>) => {
+    setPanel((cur) => (cur === p ? null : p));
+  };
+
+  const copyWechat = async () => {
+    try {
+      await navigator.clipboard.writeText(WECHAT_ID);
+    } catch {
+      // clipboard API 不可用时忽略
+    }
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <div className="fixed bottom-5 right-5 z-[60] flex flex-col items-end gap-3 sm:bottom-6 sm:right-6">
-      {/* chat panel */}
-      {open && (
+      {/* ---------- WhatsApp 面板 ---------- */}
+      {panel === "whatsapp" && (
         <div className="w-72 overflow-hidden rounded-xl shadow-2xl ring-1 ring-black/10 sm:w-80">
-          <div className="flex items-center gap-3 bg-[#075E54] px-4 py-3.5 text-white">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/15">
-              <WhatsAppIcon className="h-5 w-5" />
-            </span>
-            <div className="min-w-0 flex-1">
-              <p className="text-sm font-bold leading-tight">{BRAND.name}</p>
-              <p className="text-xs text-white/75">Typically replies within 1 hour</p>
+          <div className="flex items-center justify-between bg-[#075E54] px-4 py-3 text-white">
+            <div>
+              <p className="text-sm font-semibold">{BRAND.name}</p>
+              <p className="text-xs text-white/80">Typically replies within 1 hour</p>
             </div>
             <button
-              onClick={() => setOpen(false)}
+              onClick={() => setPanel(null)}
+              className="rounded-full p-1 transition-colors hover:bg-white/10"
               aria-label="Close chat"
-              className="rounded-full p-1 transition-colors hover:bg-white/15"
             >
               <X className="h-4 w-4" />
             </button>
           </div>
-          <div className="bg-[#ECE5DD] px-4 py-4">
-            <div className="max-w-[85%] rounded-lg rounded-tl-none bg-white px-3.5 py-2.5 text-sm leading-relaxed text-[#1B2A3A] shadow-sm">
-              Hi there! 👋 Interested in our smart film products? Send us a message — we usually reply within 1 hour.
+          <div className="bg-[#ECE5DD] p-4">
+            <div className="mb-3 max-w-[85%] rounded-lg rounded-tl-none bg-white p-3 text-sm text-gray-700 shadow-sm">
+              Hi there! Interested in our smart film products? Send us a message and we'll get back
+              to you shortly.
             </div>
             <textarea
-              rows={2}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              placeholder="Type your message…"
-              className="mt-3 w-full resize-none rounded-md border border-[#D5DEE6] bg-white px-3 py-2 text-sm outline-none focus:border-[#25D366]"
+              placeholder="Type your message..."
+              rows={3}
+              className="mb-3 w-full resize-none rounded-lg border border-gray-200 bg-white p-2.5 text-sm text-gray-800 outline-none placeholder:text-gray-400 focus:border-[#25D366] focus:ring-1 focus:ring-[#25D366]"
             />
             <a
               href={chatUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 flex w-full items-center justify-center gap-2 rounded-md bg-[#25D366] px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[#1EB856]"
+              className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#25D366] px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#1EBE5B]"
             >
               <WhatsAppIcon className="h-4 w-4" />
               Start Chat on WhatsApp
@@ -66,14 +82,68 @@ export default function WhatsAppFloat() {
         </div>
       )}
 
-      {/* floating button */}
-      <button
-        onClick={() => setOpen(!open)}
-        aria-label={open ? "Close WhatsApp chat" : "Chat with us on WhatsApp"}
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-[#25D366]/30 transition-all duration-300 hover:scale-110 hover:shadow-2xl active:scale-95"
-      >
-        {open ? <X className="h-6 w-6" /> : <WhatsAppIcon className="h-7 w-7" />}
-      </button>
+      {/* ---------- WeChat 面板 ---------- */}
+      {panel === "wechat" && (
+        <div className="w-72 overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-black/10 sm:w-80">
+          <div className="flex items-center justify-between bg-[#07C160] px-4 py-3 text-white">
+            <div>
+              <p className="text-sm font-semibold">WeChat</p>
+              <p className="text-xs text-white/80">Scan or add us on WeChat</p>
+            </div>
+            <button
+              onClick={() => setPanel(null)}
+              className="rounded-full p-1 transition-colors hover:bg-white/10"
+              aria-label="Close WeChat panel"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          </div>
+          <div className="p-4">
+            {/* 二维码图片：把微信二维码命名为 wechat-qr.png 放到 public/images/ */}
+            <div className="mx-auto mb-3 flex h-44 w-44 items-center justify-center overflow-hidden rounded-lg border border-gray-200 bg-gray-50">
+              <img
+                src="/images/wechat-qr.png"
+                alt="WeChat QR code"
+                className="h-full w-full object-contain"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = "none";
+                }}
+              />
+            </div>
+            <div className="flex items-center justify-between rounded-lg border border-gray-200 bg-gray-50 px-3 py-2.5">
+              <div className="min-w-0">
+                <p className="text-[11px] uppercase tracking-wide text-gray-400">WeChat ID</p>
+                <p className="truncate text-sm font-semibold text-gray-800">{WECHAT_ID}</p>
+              </div>
+              <button
+                onClick={copyWechat}
+                className="ml-2 flex shrink-0 items-center gap-1.5 rounded-md bg-[#07C160] px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-[#06AD56]"
+              >
+                {copied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
+                {copied ? "Copied" : "Copy"}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ---------- 悬浮按钮组（上下排列） ---------- */}
+      <div className="flex flex-col gap-3">
+        <button
+          onClick={() => toggle("whatsapp")}
+          className="flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-[#25D366]/30 transition-all duration-300 hover:scale-110 active:scale-95"
+          aria-label="Chat on WhatsApp"
+        >
+          {panel === "whatsapp" ? <X className="h-6 w-6" /> : <WhatsAppIcon className="h-7 w-7" />}
+        </button>
+        <button
+          onClick={() => toggle("wechat")}
+          className="flex h-14 w-14 items-center justify-center rounded-full bg-[#07C160] text-white shadow-xl shadow-[#07C160]/30 transition-all duration-300 hover:scale-110 active:scale-95"
+          aria-label="Chat on WeChat"
+        >
+          {panel === "wechat" ? <X className="h-6 w-6" /> : <MessageCircle className="h-7 w-7" />}
+        </button>
+      </div>
     </div>
   );
 }
