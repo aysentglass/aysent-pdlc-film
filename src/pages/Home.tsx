@@ -38,7 +38,7 @@ const STATS = [
 const CERTS = [
    { name: "CE",  image: "/images/cert-ce.jpg", desc: "Compliant with European safety standards" },
   { name: "RoHS", image: "/images/cert-rohs.jpg", desc: "Restriction of hazardous substances certified" },
-  { name: "CE",  image: "/images/cert-fcc.jpg", desc: "Compliant with US electromagnetic interference & radio frequency standards" },
+  { name: "FCC",  image: "/images/cert-fcc.jpg", desc: "Compliant with US electromagnetic interference & radio frequency standards" },
 ];
 
 const OEM_STEPS = ["Requirements", "Sampling", "Confirmation", "Mass Production", "Delivery"];
