@@ -28,7 +28,6 @@ export default function ImagePlaceholder({
       <img
         src={src}
         alt={label}
-        loading="lazy"
         className={`w-full object-cover ${isFull ? "h-full" : ratio} ${className}`}
       />
     );
