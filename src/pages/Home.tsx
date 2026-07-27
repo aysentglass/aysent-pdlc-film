@@ -386,7 +386,7 @@ export default function Home() {
                   dark
                   label={item.label}
                   size="1400×1000"
-                  ratio={i === 1 ? "aspect-[4/3] sm:-translate-y-6" : "aspect-[4/3]"}
+                  ratio="aspect-[4/3]"
                   src={item.src}
                   className="rounded-none"
                 />
