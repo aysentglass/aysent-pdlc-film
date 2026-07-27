@@ -4,9 +4,9 @@ export const BRAND = {
   name: "AYSENT SMART FILM",
   tagline: "Privacy on Demand, Quality from the Source Factory",
   email: "aaronliu@aysentglass.com",
-  whatsapp: "+86-151-6320-6027",
+  whatsapp: "+86-15163206027",
   phone: "+86-151-6320-6027",
-  wechat: "+86-151-6320-6027",   // 改成你的真实微信号
+  wechat: "008615163206027",   // 改成你的真实微信号
   address:
     "Headquarters Building of Huantou Center, No. 1728, Shanguo South Road, Jinghe Sub-district, Tengzhou City, Zaozhuang City, Shandong Province， China",
   workingHours: "Monday – Saturday, 8:30 – 18:30 (GMT+8)",
