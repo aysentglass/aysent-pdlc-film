@@ -67,8 +67,8 @@ export default function WhatsAppFloat() {
           </div>
           <div className="bg-[#ECE5DD] p-4">
             <div className="mb-3 max-w-[85%] rounded-lg rounded-tl-none bg-white p-3 text-sm text-gray-700 shadow-sm">
-              Hi there! Interested in our smart film products? Send us a message and we'll get back
-              to you shortly.
+              Hi there! Interested in our smart film products? Send us a message and we'll get back to you shortly.
+              You can also reach me directly via WhatsApp: +86-15163206207.
             </div>
             <textarea
               value={message}
