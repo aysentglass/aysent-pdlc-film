@@ -1,5 +1,5 @@
-import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { motion } from "framer-motion";
+import { useEffect, useState, type ReactNode } from "react";
 
 /**
  * Safety net: returns true shortly after mount so scroll-triggered content
