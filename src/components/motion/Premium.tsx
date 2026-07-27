@@ -1,7 +1,17 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { Reveal } from "./Reveal";
+
+/** Same safety net as in Reveal.tsx — force content visible after mount. */
+function useForcedVisible(ms = 1600) {
+  const [forced, setForced] = useState(false);
+  useEffect(() => {
+    const t = setTimeout(() => setForced(true), ms);
+    return () => clearTimeout(t);
+  }, [ms]);
+  return forced;
+}
 
 /* ---------- Curtain-wipe reveal for large images ---------- */
 
@@ -20,10 +30,13 @@ export function ClipReveal({ children, className, delay = 0, from = "bottom" }: 
     right: "inset(0% 0% 0% 100%)",
   }[from];
 
+  const forced = useForcedVisible();
+
   return (
     <motion.div
       className={className}
       initial={{ clipPath: start, opacity: 0.5 }}
+      animate={forced ? { clipPath: "inset(0% 0% 0% 0%)", opacity: 1 } : undefined}
       whileInView={{ clipPath: "inset(0% 0% 0% 0%)", opacity: 1 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 1, delay, ease: [0.65, 0.05, 0.2, 1] }}

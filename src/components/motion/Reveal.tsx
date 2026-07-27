@@ -1,6 +1,19 @@
-import { motion } from "framer-motion";
-import { type ReactNode } from "react";
+import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
+/**
+ * Safety net: returns true shortly after mount so scroll-triggered content
+ * never stays invisible if the viewport observer fails to fire (seen on some
+ * mobile browsers / in-app webviews).
+ */
+function useForcedVisible(ms = 1500) {
+  const [forced, setForced] = useState(false);
+  useEffect(() => {
+    const t = setTimeout(() => setForced(true), ms);
+    return () => clearTimeout(t);
+  }, [ms]);
+  return forced;
+}
 /* ---------- Scroll reveal wrapper ---------- */
 
 interface RevealProps {
@@ -29,10 +42,13 @@ export function Reveal({
     none: { x: 0, y: 0 },
   }[direction];
 
+  const forced = useForcedVisible();
+
   return (
     <motion.div
       className={className}
       initial={{ opacity: 0, ...offsets }}
+      animate={forced ? { opacity: 1, x: 0, y: 0 } : undefined}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.7, delay, ease: [0.21, 0.65, 0.27, 0.99] }}
@@ -53,10 +69,13 @@ export function Stagger({
   className?: string;
   gap?: number;
 }) {
+  const forced = useForcedVisible();
+
   return (
     <motion.div
       className={className}
       initial="hidden"
+      animate={forced ? "show" : undefined}
       whileInView="show"
       viewport={{ once: true, margin: "-60px" }}
       variants={{
@@ -115,10 +134,13 @@ export function Counter({ value, suffix = "", className }: CounterProps) {
 /* ---------- Slow zoom image on scroll into view ---------- */
 
 export function ZoomOnView({ children, className }: { children: ReactNode; className?: string }) {
+  const forced = useForcedVisible();
+
   return (
     <motion.div
       className={className}
       initial={{ opacity: 0, scale: 1.06 }}
+      animate={forced ? { opacity: 1, scale: 1 } : undefined}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 1.1, ease: [0.16, 0.6, 0.28, 1] }}
