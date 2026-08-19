@@ -186,7 +186,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.5, ease: heroEase }}
               >
-                <ImagePlaceholder dark ratio="aspect-[4/5]" label="PDLC smart film ON state — crystal clear office glass" size="1000×1400" className="lg:min-h-[34rem]" src="/images/hero-on.jpg" />
+                <ImagePlaceholder dark ratio="aspect-[4/5]" label="PDLC smart film ON state — crystal clear office glass" size="1000×1400" className="lg:min-h-[34rem]" src="/images/hero-on.webp" priority />
                 <p className="mt-3 text-center text-sm font-bold uppercase tracking-[0.2em] text-white/80">ON · Clear</p>
               </motion.div>
             </motion.div>
@@ -197,7 +197,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.65, ease: heroEase }}
               >
-                <ImagePlaceholder dark ratio="aspect-[4/5]" label="PDLC smart film OFF state — frosted privacy glass wall" size="1000×1400" className="lg:min-h-[34rem]" src="/images/hero-off.jpg" />
+                <ImagePlaceholder dark ratio="aspect-[4/5]" label="PDLC smart film OFF state — frosted privacy glass wall" size="1000×1400" className="lg:min-h-[34rem]" src="/images/hero-off.webp" priority />
                 <p className="mt-3 text-center text-sm font-bold uppercase tracking-[0.2em] text-white/80">OFF · Frosted</p>
               </motion.div>
             </motion.div>
@@ -352,7 +352,7 @@ export default function Home() {
         desc="One touch on a wall switch, remote or smartphone app — light, view and privacy on your terms."
         imageLabel="Full-width ON/OFF Switching Effect Photo"
         imageSize="1920×900"
-        image="/images/band-switch.jpg"
+        image="/images/band-switch.webp"
       />
 
       {/* 6. Factory showcase + giant animated stats */}
@@ -377,9 +377,9 @@ export default function Home() {
           </Reveal>
           <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-3">
             {[
-              { label: "Coating Workshop", src: "/images/factory-coating.jpg" },
-              { label: "Lamination Production Line", src: "/images/factory-lamination.jpg" },
-              { label: "QC & Aging Test Equipment", src: "/images/factory-qc.jpg" },
+              { label: "Coating Workshop", src: "/images/factory-coating.webp" },
+              { label: "Lamination Production Line", src: "/images/factory-lamination.webp" },
+              { label: "QC & Aging Test Equipment", src: "/images/factory-qc.webp" },
             ].map((item, i) => (
               <ClipReveal key={item.label} delay={i * 0.12} from={i === 1 ? "left" : "bottom"}>
                 <ImagePlaceholder
@@ -445,7 +445,7 @@ export default function Home() {
         desc="Custom sizes, colors, voltages, control systems and private-label packaging — engineered and manufactured under one roof."
         imageLabel="Full-width Custom Production & Packaging Photo"
         imageSize="1920×900"
-        image="/images/band-oem.jpg"
+        image="/images/band-oem.webp"
       />
 
       {/* 8. OEM / ODM */}

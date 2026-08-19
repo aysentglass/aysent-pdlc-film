@@ -1,0 +1,13 @@
+# AYSENT SMART FILM — robots.txt
+# 部署前请将域名替换为你的实际域名。
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# Block common bot paths that don't need indexing
+Disallow: /*?*ref=
+Disallow: /*?*utm_
+
+Sitemap: https://www.aysentsmartfilm.com/sitemap.xml

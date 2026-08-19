@@ -8,11 +8,14 @@ interface Props {
   dark?: boolean;
   /** real image path (e.g. /images/hero-on.jpg); falls back to placeholder box */
   src?: string;
+  /** set true for above-the-fold hero images to preload eagerly */
+  priority?: boolean;
 }
 
 /**
  * Image block: renders a real photo when `src` is provided, otherwise a
  * light gray placeholder box with description + suggested dimensions.
+ * Uses native lazy loading + async decoding for performance.
  */
 export default function ImagePlaceholder({
   label,
@@ -21,6 +24,7 @@ export default function ImagePlaceholder({
   className = "",
   dark = false,
   src,
+  priority = false,
 }: Props) {
   if (src) {
     const isFull = ratio === "h-full";
@@ -28,6 +32,9 @@ export default function ImagePlaceholder({
       <img
         src={src}
         alt={label}
+        loading={priority ? "eager" : "lazy"}
+        decoding="async"
+        fetchPriority={priority ? "high" : "auto"}
         className={`w-full object-cover ${isFull ? "h-full" : ratio} ${className}`}
       />
     );

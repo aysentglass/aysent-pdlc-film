@@ -36,8 +36,8 @@ export const PRODUCTS: Product[] = [
       "Roll-form PDLC smart glass film that switches from frosted to transparent in 0.1 seconds — ideal for lamination and large-scale projects.",
     overview:
       "Our PDLC (Polymer Dispersed Liquid Crystal) smart film is the core product of AYSENT SMART FILM. When powered on, liquid crystal molecules align to make the film instantly transparent; when powered off, the film turns frosted for complete privacy. Supplied in roll form for glass laminators, fabricators and project contractors worldwide.",
-    image: "/images/product-pdlc.jpg",
-    bandImage: "/images/band-switch.jpg",
+    image: "/images/product-pdlc.webp",
+    bandImage: "/images/band-switch.webp",
     imageAlt: "PDLC smart film roll switching between transparent and frosted states",
     imageSize: "1200×800",
     highlights: [
@@ -80,8 +80,8 @@ export const PRODUCTS: Product[] = [
       "Peel-and-stick switchable privacy film that retrofits directly onto existing glass — no glass replacement needed.",
     overview:
       "The self-adhesive smart film adds a high-tack adhesive backing to our PDLC film, allowing it to be applied directly onto existing glass surfaces. It is the fastest and most cost-effective way to upgrade windows, partitions and doors into switchable privacy glass — perfect for renovation and retrofit projects.",
-    image: "/images/product-adhesive.jpg",
-    bandImage: "/images/band-project.jpg",
+    image: "/images/product-adhesive.webp",
+    bandImage: "/images/band-project.webp",
     imageAlt: "Self-adhesive switchable privacy film applied to existing office glass",
     imageSize: "1200×800",
     highlights: [
@@ -124,8 +124,8 @@ export const PRODUCTS: Product[] = [
       "Ready-to-install smart glass panels: PDLC film laminated between safety glass for facades, partitions and curtain walls.",
     overview:
       "Switchable laminated glass integrates our PDLC smart film between two sheets of tempered or float glass using EVA/PVB lamination. The result is a factory-finished, safety-rated smart glass panel that arrives ready to install — ideal for curtain walls, partitions, doors and skylights in commercial and residential projects.",
-    image: "/images/product-laminated.jpg",
-    bandImage: "/images/app-mall.jpg",
+    image: "/images/product-laminated.webp",
+    bandImage: "/images/app-mall.webp",
     imageAlt: "Switchable laminated smart glass panel for office curtain wall",
     imageSize: "1200×800",
     highlights: [
@@ -168,7 +168,7 @@ export const PRODUCTS: Product[] = [
       "Transformers, remote controls, smart control modules and installation tools — everything needed to power and control smart film.",
     overview:
       "AYSENT SMART FILM supplies a complete range of accessories engineered to work perfectly with our PDLC films and smart glass: power transformers, remote-control systems, Wi-Fi/app smart modules, dimming controllers and professional installation tool kits. Sourcing film and accessories from one factory guarantees compatibility and simplifies your supply chain.",
-    image: "/images/product-accessories.jpg",
+    image: "/images/product-accessories.webp",
     bandImage: "/images/band-accessories.jpg",
     imageAlt: "Smart film transformers, remote controls and installation tool kit",
     imageSize: "1200×800",
@@ -254,7 +254,7 @@ export const APPLICATIONS: Application[] = [
     solution:
       "Switchable privacy film turns glass partitions frosted in 0.1 seconds for confidential meetings, and transparent again to keep the office bright and spacious. It also serves as a projection screen in frosted mode.",
     products: ["pdlc-smart-film", "self-adhesive-smart-film", "switchable-laminated-glass"],
-    image: "/images/app-office.jpg",
+    image: "/images/app-office.webp",
     imageAlt: "Switchable privacy film on office glass partition walls",
   },
   {
@@ -264,7 +264,7 @@ export const APPLICATIONS: Application[] = [
     solution:
       "Smart film on bathroom glass and room dividers gives guests one-touch privacy with a luxury feel — a signature feature in high-end hotels, from guest suites to spa and shower enclosures.",
     products: ["self-adhesive-smart-film", "switchable-laminated-glass"],
-    image: "/images/app-hotel.jpg",
+    image: "/images/app-hotel.webp",
     imageAlt: "Smart glass bathroom partition in a luxury hotel suite",
   },
   {
@@ -274,7 +274,7 @@ export const APPLICATIONS: Application[] = [
     solution:
       "Switchable film on windows, doors and skylights replaces curtains: transparent when you want the view, frosted when you want privacy, with 98% UV blocking and smart-home control integration.",
     products: ["self-adhesive-smart-film", "pdlc-smart-film"],
-    image: "/images/app-villa.jpg",
+    image: "/images/app-villa.webp",
     imageAlt: "Villa windows with switchable smart film for privacy",
   },
   {
@@ -284,7 +284,7 @@ export const APPLICATIONS: Application[] = [
     solution:
       "Automotive-grade smart film for side windows, sunroofs and partition screens delivers on-demand privacy and solar control — popular in luxury cars, RVs, yachts and VIP transport conversions.",
     products: ["pdlc-smart-film", "smart-film-accessories"],
-    image: "/images/app-automotive.jpg",
+    image: "/images/app-automotive.webp",
     imageAlt: "Switchable smart film on automotive sunroof and windows",
   },
   {
@@ -294,7 +294,7 @@ export const APPLICATIONS: Application[] = [
     solution:
       "Switchable laminated glass curtain walls adjust transparency for daylight management and transform into giant rear-projection media facades after dark — architecture and advertising in one surface.",
     products: ["switchable-laminated-glass", "smart-film-accessories"],
-    image: "/images/app-mall.jpg",
+    image: "/images/app-mall.webp",
     imageAlt: "Smart glass curtain wall facade on a shopping mall",
   },
 ];
@@ -369,7 +369,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "A complete introduction to PDLC smart glass film: how it switches from frosted to transparent, key technical specs, application scenarios and what to check before buying from a smart film manufacturer.",
     date: "July 10, 2026",
     readTime: "6 min read",
-    image: "/images/blog-pdlc.jpg",
+    image: "/images/blog-pdlc.webp",
     imageAlt: "PDLC smart film sample switching between frosted and transparent states",
     sections: [
       {
@@ -434,7 +434,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Smart film or smart glass? Compare cost, installation, durability and ideal use cases of self-adhesive switchable film versus laminated switchable glass to choose the right privacy solution for your project.",
     date: "July 16, 2026",
     readTime: "6 min read",
-    image: "/images/blog-compare.jpg",
+    image: "/images/blog-compare.webp",
     imageAlt: "Comparison of self-adhesive smart film and switchable laminated smart glass",
     sections: [
       {

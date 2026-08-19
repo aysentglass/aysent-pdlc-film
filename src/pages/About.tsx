@@ -8,10 +8,10 @@ import { ClipReveal, ParallaxBand } from "@/components/motion/Premium";
 import { useSeo } from "@/components/Seo";
 
 const PRODUCTION_LINES = [
-  { name: "Precision Coating Line", image: "/images/factory-coating.jpg", desc: "Automated ITO coating and liquid-crystal filling lines ensure uniform film thickness and consistent optical performance across every roll." },
-  { name: "Lamination Line", image: "/images/factory-lamination.jpg", desc: "Clean-room EVA/PVB lamination bonds PDLC film between tempered glass panels for safety-rated switchable laminated glass." },
-  { name: "Precision Cutting", image: "/images/factory-cutting.jpg", desc: "CNC cutting and laser trimming deliver custom sizes with clean edges and accurate bus-bar placement." },
-  { name: "Aging & Reliability Test", image: "/images/factory-qc.jpg", desc: "Every batch passes 72-hour continuous switching tests, high/low temperature cycles and humidity aging before packing." },
+  { name: "Precision Coating Line", image: "/images/factory-coating.webp", desc: "Automated ITO coating and liquid-crystal filling lines ensure uniform film thickness and consistent optical performance across every roll." },
+  { name: "Lamination Line", image: "/images/factory-lamination.webp", desc: "Clean-room EVA/PVB lamination bonds PDLC film between tempered glass panels for safety-rated switchable laminated glass." },
+  { name: "Precision Cutting", image: "/images/factory-cutting.webp", desc: "CNC cutting and laser trimming deliver custom sizes with clean edges and accurate bus-bar placement." },
+  { name: "Aging & Reliability Test", image: "/images/factory-qc.webp", desc: "Every batch passes 72-hour continuous switching tests, high/low temperature cycles and humidity aging before packing." },
 ];
 
 const STATS = [
@@ -41,7 +41,7 @@ export default function About() {
       <PageHero
         eyebrow="About Us"
         title="A Decade of Focus on Smart Film"
-        desc="A source smart film manufacturer in Guangdong, China — engineering and producing reliable PDLC smart film, switchable privacy film and smart glass for B2B buyers worldwide."
+        desc="A source smart film manufacturer in Shandong, China — engineering and producing reliable PDLC smart film, switchable privacy film and smart glass for B2B buyers worldwide."
       />
 
       {/* Factory intro + giant stats */}
@@ -49,7 +49,7 @@ export default function About() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="group grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <ClipReveal from="left" className="overflow-hidden">
-              <ImagePlaceholder label="Factory Building & Workshop Overview Photo" size="1400×1000" ratio="aspect-[16/11]" src="/images/factory-building.jpg" className="shine rounded-none transition-transform duration-700 ease-out group-hover:scale-[1.04]" />
+              <ImagePlaceholder label="Factory Building & Workshop Overview Photo" size="1400×1000" ratio="aspect-[16/11]" src="/images/factory-building.webp" className="shine rounded-none transition-transform duration-700 ease-out group-hover:scale-[1.04]" />
             </ClipReveal>
             <Reveal direction="left" delay={0.15}>
               <SectionHead

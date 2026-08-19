@@ -9,7 +9,13 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { name, company, email, country = "", requirements } = req.body ?? {};
+  const { name, company, email, country = "", requirements, website = "" } = req.body ?? {};
+
+  // Honeypot: the hidden "website" field should never be filled by a real user.
+  // If it is, silently accept the request without storing — don't reveal the trap.
+  if (website && String(website).trim()) {
+    return res.status(200).json({ ok: true });
+  }
 
   // server-side validation (never trust the client)
   if (!name?.trim() || !company?.trim() || !email?.trim() || !requirements?.trim()) {

@@ -36,7 +36,7 @@ const CONTACT_CARDS = [
 export default function Contact() {
   useSeo(
     "Contact Us | Get a Free Smart Film Quote in 24 Hours — AYSENT SMART FILM",
-    "Contact AYSENT SMART FILM for smart film quotations, samples and OEM/ODM projects. Email sales@aysentsmartfilm.com or send the inquiry form — we reply within 24 hours."
+    "Contact AYSENT SMART FILM for smart film quotations, samples and OEM/ODM projects. Email aaronliu@aysentglass.com or send the inquiry form — we reply within 24 hours."
   );
 
   return (

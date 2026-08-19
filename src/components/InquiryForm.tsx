@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { CheckCircle2, Loader2, Send, TriangleAlert } from "lucide-react";
 
 interface Props {
@@ -16,6 +16,8 @@ interface Errors {
 }
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+/** Minimum seconds a human needs to fill the form — faster submissions are treated as bots. */
+const MIN_FILL_SECONDS = 3;
 
 export default function InquiryForm({ withCountry = false, dark = false, productName }: Props) {
   const [form, setForm] = useState({
@@ -24,11 +26,14 @@ export default function InquiryForm({ withCountry = false, dark = false, product
     email: "",
     country: "",
     requirements: productName ? `Hi, I'm interested in your ${productName}. Please send me a quotation.\n\n` : "",
+    // honeypot field — real users never see or fill this; bots usually do
+    website: "",
   });
   const [errors, setErrors] = useState<Errors>({});
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [serverError, setServerError] = useState("");
+  const startTimeRef = useRef<number>(Date.now());
 
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [k]: e.target.value });
@@ -38,6 +43,19 @@ export default function InquiryForm({ withCountry = false, dark = false, product
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Honeypot: if the hidden field was filled, silently pretend success (don't reveal the trap).
+    if (form.website.trim()) {
+      setSubmitted(true);
+      return;
+    }
+
+    // Time-based bot detection: too-fast submissions are likely automated.
+    if (Date.now() - startTimeRef.current < MIN_FILL_SECONDS * 1000) {
+      setSubmitted(true);
+      return;
+    }
+
     const errs: Errors = {};
     if (!form.name.trim()) errs.name = "Please enter your name.";
     if (!form.company.trim()) errs.company = "Please enter your company name.";
@@ -63,8 +81,8 @@ export default function InquiryForm({ withCountry = false, dark = false, product
     } catch (err) {
       setServerError(
         err instanceof Error
-          ? `${err.message} You can also email us directly at sales@aysentsmartfilm.com.`
-          : "Network error. Please email us directly at sales@aysentsmartfilm.com."
+          ? `${err.message} You can also email us directly at aaronliu@aysentglass.com.`
+          : "Network error. Please email us directly at aaronliu@aysentglass.com."
       );
     } finally {
       setSubmitting(false);
@@ -87,13 +105,14 @@ export default function InquiryForm({ withCountry = false, dark = false, product
         <CheckCircle2 className={`mb-3 h-12 w-12 ${dark ? "text-emerald-300" : "text-emerald-600"}`} />
         <h3 className={`text-lg font-bold ${dark ? "text-white" : "text-[#1B2A3A]"}`}>Inquiry Sent Successfully!</h3>
         <p className={`mt-2 max-w-sm text-sm ${dark ? "text-white/75" : "text-[#4A5B6C]"}`}>
-          Thank you, {form.name.split(" ")[0]}. Our sales engineer will reply to{" "}
+          Thank you, {form.name.split(" ")[0] || "there"}. Our sales engineer will reply to{" "}
           <span className="font-semibold">{form.email}</span> within 24 hours.
         </p>
         <button
           onClick={() => {
             setSubmitted(false);
-            setForm({ name: "", company: "", email: "", country: "", requirements: "" });
+            setForm({ name: "", company: "", email: "", country: "", requirements: "", website: "" });
+            startTimeRef.current = Date.now();
           }}
           className="mt-5 rounded-md border border-current px-4 py-2 text-sm font-medium opacity-80 transition-opacity hover:opacity-100"
         >
@@ -105,6 +124,23 @@ export default function InquiryForm({ withCountry = false, dark = false, product
 
   return (
     <form onSubmit={onSubmit} noValidate className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      {/* Honeypot: visually hidden but present in DOM. Bots auto-fill "website" fields. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-[-9999px] top-auto h-0 w-0 overflow-hidden"
+      >
+        <label htmlFor="inq-website">Website</label>
+        <input
+          id="inq-website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          value={form.website}
+          onChange={set("website")}
+          placeholder="Your website"
+        />
+      </div>
+
       <div>
         <label className={labelCls} htmlFor="inq-name">Name *</label>
         <input id="inq-name" className={inputCls(errors.name)} placeholder="Your full name" value={form.name} onChange={set("name")} />
