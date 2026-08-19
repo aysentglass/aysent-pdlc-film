@@ -490,6 +490,201 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "how-to-install-self-adhesive-smart-film",
+    title: "How to Install Self-Adhesive Smart Film: A Step-by-Step Guide",
+    excerpt:
+      "A complete installation guide for self-adhesive PDLC switchable film: tools needed, six steps from measuring to wiring, common mistakes to avoid, and when to call a professional installer.",
+    date: "August 5, 2026",
+    readTime: "7 min read",
+    image: "/images/product-adhesive.webp",
+    imageAlt: "Self-adhesive smart film being applied onto an office glass partition",
+    sections: [
+      {
+        paragraphs: [
+          "Self-adhesive smart film is the fastest way to turn ordinary glass into switchable privacy glass — and because it sticks directly onto existing glazing, installation does not require replacing windows or partitions. With the right tools and a clean workspace, a trained installer can complete a typical office partition in under an hour. This step-by-step guide walks you through the full process, from preparation to the final power test, so you can plan your project with confidence.",
+        ],
+      },
+      {
+        heading: "Tools and Materials You Will Need",
+        paragraphs: [
+          "Before you start, gather everything on this list. Running out of supplies mid-installation is the most common cause of bubbles and misalignment.",
+        ],
+        list: [
+          "Self-adhesive PDLC smart film (cut to size, or slightly oversize for trimming)",
+          "Installation squeegee with a soft felt edge (to avoid scratching the film)",
+          "Glass cleaner + lint-free microfiber cloths (no paper towels — they leave lint)",
+          "Application spray bottle with a drop of mild soap in distilled water",
+          "Utility knife with fresh blades and a steel ruler for trimming",
+          "Heat gun or hair dryer (for edge sealing and cold-weather installs)",
+          "PDLC transformer (36V / 48V / 60V — match the film voltage), wall switch or remote",
+          "Two-core electrical wire, wire strippers, and insulating tape",
+        ],
+      },
+      {
+        heading: "Step 1 — Measure and Cut the Film",
+        paragraphs: [
+          "Measure the glass pane precisely and add 2–3 mm of extra margin on each edge — you will trim the excess after application. Unroll the film on a clean, flat surface and cut with a sharp utility knife against a steel ruler. A dull blade will pull the adhesive layer and leave ragged edges.",
+          "Mark the top edge of the film with a small piece of tape so you do not flip it upside down — the adhesive side and the conductive bus-bar side must be oriented correctly.",
+        ],
+      },
+      {
+        heading: "Step 2 — Clean the Glass Thoroughly",
+        paragraphs: [
+          "This is the most important step. Any dust, grease or silicone residue trapped under the film will show as a permanent bubble or speck. Spray the glass with cleaner, wipe with a squeegee from top to bottom, and then do a final pass with a lint-free microfiber cloth. Run your bare hand over the surface — if you feel any grit, clean again.",
+          "For exterior-facing glass or bathrooms, make sure the room is dry and well-ventilated. Humidity above 70% makes the adhesive less tacky and increases the risk of edge lifting.",
+        ],
+      },
+      {
+        heading: "Step 3 — Peel the Release Liner and Apply",
+        paragraphs: [
+          "Peel back about 10 cm of the release liner from the top edge. Do not peel the whole backing at once — the film will stick to itself instantly. Spray the adhesive side lightly with the soapy water solution — this gives you a short window to slide the film into position before it bonds.",
+          "Align the top and one side edge, then press the top 10 cm firmly with the squeegee. Once the top is anchored, slowly peel the rest of the liner downward with one hand while smoothing the film with the squeegee in the other. Work from the center outward, in overlapping strokes.",
+        ],
+      },
+      {
+        heading: "Step 4 — Squeegee Out All Air and Water",
+        paragraphs: [
+          "Go over the entire surface with firm, overlapping squeegee strokes, pushing trapped air and water toward the nearest edge. Wipe the squeegee blade frequently on the microfiber cloth. Pay extra attention to the edges — any water left near the bus bar can cause electrical issues later.",
+          "Small bubbles that remain after 10 minutes can usually be worked out with the squeegee. Larger bubbles may require you to lift that corner and reapply. Do not puncture bubbles with a pin — it will leave a visible mark.",
+        ],
+      },
+      {
+        heading: "Step 5 — Trim the Edges and Connect Power",
+        paragraphs: [
+          "Once the film is fully smoothed, trim the excess along all four edges with a fresh utility blade. Hold the blade at a 45-degree angle and use the glass frame as a guide for a clean line.",
+          "The two conductive bus bars run along the top and bottom (or left and right, depending on the film orientation). Connect the two-core wire to each bus bar using the copper tape or conductive adhesive supplied with the film. Run the wire along the frame to the transformer, then connect the transformer to the wall switch or remote receiver. Always turn off the mains power before wiring the transformer.",
+        ],
+      },
+      {
+        heading: "Step 6 — Test and Finish",
+        paragraphs: [
+          "Restore power and test the switch. The film should change from frosted to transparent in under a second, with no dead zones or flickering. If a corner does not switch, check the bus-bar connection — a loose wire is the usual cause.",
+          "Finally, run the heat gun along all four edges on a low setting for 10–15 seconds. This activates the edge sealant and prevents moisture from creeping under the film in humid rooms. Wipe the surface with a dry microfiber cloth and the installation is complete.",
+        ],
+      },
+      {
+        heading: "Common Mistakes to Avoid",
+        list: [
+          "Skipping the final glass clean — dust under the film is permanent and impossible to fix without replacing the film.",
+          "Peeling the entire release liner at once — the film will curl and stick to itself.",
+          "Using a hard squeegee without a felt edge — it scratches the protective top layer.",
+          "Trimming with a dull blade — ragged edges look unprofessional and can lift over time.",
+          "Forgetting the heat-gun edge seal — the #1 cause of edge lifting in bathrooms and exterior glass.",
+          "Wiring the transformer to the wrong voltage — always match 36V/48V/60V to the film specification.",
+        ],
+      },
+      {
+        heading: "When to Hire a Professional",
+        paragraphs: [
+          "For small interior panes under 1 m², a confident DIYer with the right tools can achieve a good result. For anything larger — full-height partitions, curved glass, bathroom wet areas, or projects above 10 m² — we strongly recommend a professional installer. The cost of redoing a botched install (new film + labor + glass cleaning) far exceeds the savings of doing it yourself.",
+          "AYSENT SMART FILM supplies detailed video tutorials, wiring diagrams and a professional tool kit with every film order, and our engineers offer remote video support for larger projects. Contact us for a recommended installer in your region.",
+        ],
+      },
+      {
+        heading: "Conclusion",
+        paragraphs: [
+          "Self-adhesive smart film installation is straightforward when you follow the steps in order: measure, clean, apply, smooth, wire, test. The two make-or-break steps are glass cleanliness and edge sealing — get those right and your film will give you years of reliable instant privacy. Ready to start your project? Request a free sample and installation kit from AYSENT SMART FILM, and our team will help you specify the right film size, voltage and control system for your glass.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "pdlc-smart-film-cost-pricing-guide",
+    title: "PDLC Smart Film Cost & Pricing Guide: What Affects Your Project Budget",
+    excerpt:
+      "Understand how PDLC smart film is priced: film grade, size, control system, installation and shipping. Compare total costs against smart glass and curtains, and learn five ways to reduce your project budget without cutting quality.",
+    date: "August 12, 2026",
+    readTime: "6 min read",
+    image: "/images/factory-cutting.webp",
+    imageAlt: "PDLC smart film being precision-cut on a factory CNC cutting machine",
+    sections: [
+      {
+        paragraphs: [
+          "If you are budgeting for a PDLC smart film project, you have probably noticed that quoted prices vary widely — from under $50 to over $200 per square meter. The difference is not random: it comes down to film grade, size, customization, control electronics, installation and logistics. This guide breaks down every cost factor so you can compare quotes accurately and avoid budget surprises.",
+        ],
+      },
+      {
+        heading: "Price Breakdown: What You Are Actually Paying For",
+        paragraphs: [
+          "A complete smart film project has five cost components. Understanding each one helps you see where your money goes and where you can save.",
+        ],
+        list: [
+          "Film material — the PDLC film itself, priced per square meter.",
+          "Customization — cutting to size, special colors, non-standard voltages.",
+          "Control system — transformer, wall switch, remote, Wi-Fi module or dimming controller.",
+          "Installation — labor and consumables (varies hugely by country and complexity).",
+          "Shipping and import — freight, insurance, duties and customs clearance.",
+        ],
+      },
+      {
+        heading: "Factor 1 — Film Type and Optical Grade",
+        paragraphs: [
+          "The single biggest price variable is the film itself. Standard white PDLC film is the most economical. Gray or black-tinted films, ultra-high-clarity grades (transmittance above 85%), and automotive-grade films with extended temperature ranges all cost more. Always ask for the optical test report, not just the catalogue number — two films both labeled 'high clarity' can differ by 10% in real transmittance.",
+          "Self-adhesive film is typically 10–20% more expensive per square meter than roll film because of the adhesive backing and release liner, but it saves you the cost of glass lamination.",
+        ],
+      },
+      {
+        heading: "Factor 2 — Size, Shape and Quantity",
+        paragraphs: [
+          "PDLC film is manufactured in rolls up to 1,800 mm wide. Panels within the standard width are priced at the per-square-meter rate. Custom widths above 1,800 mm require seaming (two panels joined invisibly) or a special production run, both of which add cost. Irregular shapes — arches, trapezoids, circles — increase material waste and labor time.",
+          "Quantity matters more than most buyers realize. Sample orders (1–5 m²) are priced at a premium because of setup and packaging. Once you cross 50 m², the per-meter price drops significantly, and above 500 m² you enter true wholesale pricing. If you have multiple projects in the pipeline, combining them into one order can save 15–25%.",
+        ],
+      },
+      {
+        heading: "Factor 3 — Control System and Accessories",
+        paragraphs: [
+          "The film is only half the system. You also need a transformer (sized to the total film area), a control method (wall switch, RF remote, Wi-Fi app, or voice assistant integration), and wiring. A basic wall-switch setup for a single window costs around $30–60 in electronics. A full smart-home integration with dimming, app control and multiple zones can run $300–800 depending on the number of zones and controllers.",
+          "Always source the transformer and controls from the same supplier as the film. Mismatched voltage or poor-quality transformers are the leading cause of premature film failure, and a third-party electronics failure will void most film warranties.",
+        ],
+      },
+      {
+        heading: "Factor 4 — Installation Cost",
+        paragraphs: [
+          "Installation labor varies dramatically by region. In Southeast Asia and parts of Europe, a professional installer charges $15–30 per m². In North America, Australia and Northern Europe, rates of $50–100 per m² are common. Complex sites — high ceilings, exterior glass, wet areas, or buildings with strict access rules — can double the labor cost.",
+          "For self-adhesive film, installation is the same process as high-grade window tinting, so any experienced window-film installer can do the job. For laminated smart glass, you need a glazier, which is more expensive. This is why self-adhesive film is often the most economical choice for renovation projects.",
+        ],
+      },
+      {
+        heading: "Factor 5 — Shipping, Duties and Import",
+        paragraphs: [
+          "Film rolls are lightweight but bulky, so sea freight is the most economical option for orders above 20 m². Air freight is faster but costs 3–5 times more. Express courier (DHL/FedEx/UPS) is convenient for samples but prohibitively expensive for bulk orders.",
+          "Import duties vary by country. PDLC film is usually classified under HS code 3919 (self-adhesive plastic plates, sheets, film) or 7007 (safety glass) for laminated products. EU buyers should confirm CE documentation is included — missing certificates can lead to customs delays or extra charges. Always ask the supplier for a delivered-duty-paid (DDP) quote so there are no surprise costs at the port.",
+        ],
+      },
+      {
+        heading: "Cost Comparison: Film vs. Smart Glass vs. Curtains",
+        paragraphs: [
+          "To put PDLC film in perspective, here is a rough total-installed-cost comparison for a 10 m² office partition project (material + controls + installation, excluding shipping):",
+        ],
+        list: [
+          "Self-adhesive smart film: $800–$1,800 — lowest total cost, reuses existing glass, fastest install.",
+          "PDLC roll film + local lamination: $1,200–$2,500 — better for new glass, requires a local laminator.",
+          "Switchable laminated smart glass: $2,500–$5,000 — highest cost, but fully sealed for wet areas and exteriors.",
+          "Motorized curtains or blinds: $600–$1,500 — cheaper upfront, but requires maintenance, blocks light when closed, and lacks the projection and high-tech aesthetic of smart film.",
+        ],
+        tail: [
+          "The right choice depends on whether the glass is already in place, the environment (dry vs. humid), and your client's design expectations.",
+        ],
+      },
+      {
+        heading: "Five Ways to Reduce Your Budget",
+        list: [
+          "Combine orders — one 100 m² shipment costs less per meter than two 50 m² shipments.",
+          "Use standard sizes — panels within 1,800 mm width and rectangular shapes avoid custom-cutting premiums.",
+          "Choose self-adhesive film for retrofits — it eliminates the cost of new glass and glazier labor.",
+          "Start with wall-switch control — add Wi-Fi or dimming later as an upgrade; the transformer supports it.",
+          "Sea freight for bulk — plan your order 4–6 weeks ahead and avoid expensive air freight.",
+        ],
+      },
+      {
+        heading: "Conclusion",
+        paragraphs: [
+          "PDLC smart film pricing is transparent once you break it into film, customization, controls, installation and logistics. The cheapest quote is not always the best value — a film with a 3-year lifespan and no test reports will cost more in replacements than a quality film with a 2-year warranty and certified optics. As a direct manufacturer, AYSENT SMART FILM provides itemized quotations that list every cost component, so you know exactly what you are paying for. Send us your glass schedule and destination country, and we will return a detailed, no-surprise quote within 24 hours.",
+        ],
+      },
+    ],
+  },
 ];
 
 export const NAV_ITEMS = [

@@ -1,13 +1,13 @@
 # AYSENT SMART FILM — robots.txt
-# 部署前请将域名替换为你的实际域名。
+# Domain: aysentglass.com
 
 User-agent: *
 Allow: /
 Disallow: /admin
 Disallow: /api/
 
-# Block common bot paths that don't need indexing
+# Block tracking parameter URLs
 Disallow: /*?*ref=
 Disallow: /*?*utm_
 
-Sitemap: https://www.aysentsmartfilm.com/sitemap.xml
+Sitemap: https://www.aysentglass.com/sitemap.xml
