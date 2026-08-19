@@ -112,6 +112,8 @@ export default function WhatsAppFloat() {
               <img
                 src="/images/wechat-qr.png"
                 alt="WeChat QR code"
+                width={176}
+                height={176}
                 className="h-full w-full object-contain"
                 onError={(e) => {
                   (e.target as HTMLImageElement).style.display = "none";

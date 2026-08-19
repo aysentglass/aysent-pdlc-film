@@ -24,10 +24,12 @@ interface ClipRevealProps {
 }
 
 export function ClipReveal({ children, className, delay = 0, from = "bottom" }: ClipRevealProps) {
+  // Use transform (compositor-friendly) instead of clipPath to avoid paint work.
+  // Parent must have overflow-hidden (callers already do).
   const start = {
-    bottom: "inset(100% 0% 0% 0%)",
-    left: "inset(0% 100% 0% 0%)",
-    right: "inset(0% 0% 0% 100%)",
+    bottom: { y: "100%" },
+    left: { x: "-100%" },
+    right: { x: "100%" },
   }[from];
 
   const forced = useForcedVisible();
@@ -35,9 +37,9 @@ export function ClipReveal({ children, className, delay = 0, from = "bottom" }: 
   return (
     <motion.div
       className={className}
-      initial={{ clipPath: start, opacity: 0.5 }}
-      animate={forced ? { clipPath: "inset(0% 0% 0% 0%)", opacity: 1 } : undefined}
-      whileInView={{ clipPath: "inset(0% 0% 0% 0%)", opacity: 1 }}
+      initial={{ ...start, opacity: 0.6 }}
+      animate={forced ? { x: 0, y: 0, opacity: 1 } : undefined}
+      whileInView={{ x: 0, y: 0, opacity: 1 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 1, delay, ease: [0.65, 0.05, 0.2, 1] }}
     >

@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5">
-              <img src="/images/logo.png" alt="AYSENT SMART FILM" className="h-9 w-auto" />
+              <img src="/images/logo.png" alt="AYSENT SMART FILM" width={36} height={36} className="h-9 w-auto" />
               <span className="text-[15px] font-extrabold tracking-wide">{BRAND.name}</span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-white/65">

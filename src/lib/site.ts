@@ -169,7 +169,7 @@ export const PRODUCTS: Product[] = [
     overview:
       "AYSENT SMART FILM supplies a complete range of accessories engineered to work perfectly with our PDLC films and smart glass: power transformers, remote-control systems, Wi-Fi/app smart modules, dimming controllers and professional installation tool kits. Sourcing film and accessories from one factory guarantees compatibility and simplifies your supply chain.",
     image: "/images/product-accessories.webp",
-    bandImage: "/images/band-accessories.jpg",
+    bandImage: "/images/band-accessories.webp",
     imageAlt: "Smart film transformers, remote controls and installation tool kit",
     imageSize: "1200×800",
     highlights: [

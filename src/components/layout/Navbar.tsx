@@ -26,7 +26,7 @@ export default function Navbar() {
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5 text-white" aria-label="AYSENT SMART FILM home">
-  <img src="/images/logo.png" alt="AYSENT SMART FILM" className="h-9 w-auto" />
+  <img src="/images/logo.png" alt="AYSENT SMART FILM" width={36} height={36} className="h-9 w-auto" />
   <span className="leading-tight">
     <span className="block text-[15px] font-extrabold tracking-wide">{BRAND.name}</span>
     <span className="block text-[10px] font-medium uppercase tracking-[0.18em] text-white/60">
