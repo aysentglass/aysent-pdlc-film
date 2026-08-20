@@ -1,5 +1,4 @@
 import { Clock, Mail, MapPin, MapPinned, Phone } from "lucide-react";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 import InquiryForm from "@/components/InquiryForm";
 import PageHero from "@/components/PageHero";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
@@ -85,9 +84,29 @@ export default function Contact() {
                 <h2 className="flex items-center gap-2 text-lg font-extrabold tracking-tight text-[#0B2A4A]">
                   <MapPinned className="h-5 w-5 text-brand" /> Factory Location
                 </h2>
-                <div className="mt-4">
-                  <ImagePlaceholder label="Factory Location Map" size="800×450" ratio="aspect-[16/9]" className="rounded-none" />
+                <div className="mt-4 overflow-hidden rounded-md border border-[#E2E8EE]">
+                  <iframe
+                    title="AYSENT SMART FILM factory location map"
+                    src="https://www.google.com/maps?q=Tengzhou%2C%20Zaozhuang%2C%20Shandong%2C%20China&output=embed"
+                    width="100%"
+                    height="320"
+                    style={{ border: 0, display: "block" }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                  />
                 </div>
+                <p className="mt-3 text-sm leading-relaxed text-[#5A6B7C]">
+                  {BRAND.address}
+                </p>
+                <a
+                  href="https://www.google.com/maps?q=Tengzhou%2C%20Zaozhuang%2C%20Shandong%2C%20China"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-accent transition-colors hover:text-brand"
+                >
+                  Open in Google Maps →
+                </a>
               </Reveal>
             </div>
 
