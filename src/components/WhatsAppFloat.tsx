@@ -48,7 +48,7 @@ export default function WhatsAppFloat() {
   };
 
   return (
-    <div className="fixed bottom-5 right-5 z-[60] flex flex-col items-end gap-3 sm:bottom-6 sm:right-6">
+    <div className="fixed bottom-24 right-5 z-[60] flex flex-col items-end gap-3 sm:bottom-28 sm:right-6">
       {/* ---------- WhatsApp 面板 ---------- */}
       {panel === "whatsapp" && (
         <div className="w-72 overflow-hidden rounded-xl shadow-2xl ring-1 ring-black/10 sm:w-80">
