@@ -6,22 +6,55 @@
     <meta name="theme-color" content="#0B2A4A" />
     <meta name="description" content="AYSENT PDLC SMART FILM is a professional PDLC smart film manufacturer and supplier in China, offering PDLC smart glass film, self-adhesive switchable privacy film, laminated smart glass and accessories with low MOQ, OEM/ODM service and worldwide shipping." />
     <meta name="keywords" content="PDLC smart film manufacturer, PDLC switchable privacy film, PDLC smart glass film, PDLC smart film supplier" />
+    <link rel="canonical" href="https://www.aysentglass.com/" />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.aysentglass.com/" />
     <meta property="og:title" content="PDLC Smart Film Manufacturer | AYSENT SMART FILM" />
     <meta property="og:description" content="Professional PDLC smart film manufacturer in China. Switchable privacy film, self-adhesive film, laminated smart glass and accessories. Low MOQ, OEM/ODM, worldwide shipping." />
-    <meta property="og:image" content="/images/hero-on.webp" />
+    <meta property="og:image" content="https://www.aysentglass.com/images/hero-on.webp" />
     <meta name="twitter:card" content="summary_large_image" />
-    <title>PDLC Smart Film Manufacturer | PDLC Smart Glass Film Supplier — AYSENT PDLC SMART FILM</title>
+    <title>PDLC Smart Film Manufacturer | PDLC Smart Glass Film Supplier — AYSENT</title>
 
-    <!-- Preload LCP hero image for faster Largest Contentful Paint -->
-    <link rel="preload" as="image" href="/images/hero-on.webp" fetchpriority="high" />
-    <link rel="preload" as="image" href="/images/hero-off.webp" fetchpriority="high" />
+    <!-- Preload the single LCP hero image (mobile-optimized size) for faster paint -->
+    <link rel="preload" as="image" href="/images/hero-on-768w.webp" imagesrcset="/images/hero-on-480w.webp 480w, /images/hero-on-768w.webp 768w, /images/hero-on.webp 1200w" imagesizes="(max-width: 768px) 100vw, 50vw" fetchpriority="high" />
 
     <!-- Preconnect to third-party analytics domain -->
     <link rel="preconnect" href="//tfile.xiaoman.cn" crossorigin />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Inline skeleton: shows meaningful first paint before JS hydrates -->
+      <style>
+        .ays-skel{min-height:100vh;background:linear-gradient(135deg,#0B2A4A,#1E5A96 60%,#0B2A4A);color:#fff;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;display:flex;align-items:center;justify-content:center;padding:2rem}
+        .ays-skel-inner{max-width:720px;width:100%}
+        .ays-skel-eyebrow{display:inline-flex;align-items:center;gap:.75rem;font-size:.75rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:#7FB3E8}
+        .ays-skel-eyebrow::before{content:"";width:2.5rem;height:1px;background:#7FB3E8}
+        .ays-skel-title{margin-top:1.5rem;font-size:clamp(2.5rem,8vw,5rem);font-weight:800;line-height:1.05;letter-spacing:-.02em}
+        .ays-skel-title span{display:block}
+        .ays-skel-title .accent{color:#9CC4EC}
+        .ays-skel-desc{margin-top:1.75rem;font-size:1.125rem;line-height:1.7;color:rgba(255,255,255,.7);max-width:32rem}
+        .ays-skel-btns{margin-top:2.5rem;display:flex;flex-wrap:wrap;gap:1rem}
+        .ays-skel-btn{display:inline-flex;align-items:center;gap:.5rem;padding:1rem 2rem;border-radius:.375rem;font-weight:700;font-size:1rem}
+        .ays-skel-btn.primary{background:#fff;color:#0B2A4A}
+        .ays-skel-btn.secondary{border:2px solid rgba(255,255,255,.4);color:#fff}
+        .ays-skel-pulse{animation:ays-pulse 1.5s ease-in-out infinite}
+        @keyframes ays-pulse{0%,100%{opacity:1}50%{opacity:.5}}
+      </style>
+      <div class="ays-skel">
+        <div class="ays-skel-inner">
+          <div class="ays-skel-eyebrow ays-skel-pulse">Smart Film Manufacturer · 10 Years Factory</div>
+          <h1 class="ays-skel-title">
+            <span>PDLC Smart Glass Film.</span>
+            <span class="accent">Privacy on Demand.</span>
+          </h1>
+          <p class="ays-skel-desc">Switchable privacy film and smart glass engineered for offices, hotels, villas, automotive and curtain wall projects — direct from the source factory.</p>
+          <div class="ays-skel-btns">
+            <span class="ays-skel-btn primary">View Products →</span>
+            <span class="ays-skel-btn secondary">Get Free Quote</span>
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
 
     <!-- Deferred analytics: load after page is interactive to avoid competing for bandwidth -->
@@ -35,7 +68,7 @@
           s.async = true;
           s.src = "//tfile.xiaoman.cn/okki/analyze.js?id=365757-33332-";
           document.body.appendChild(s);
-        }, { timeout: 3000 });
+        }, { timeout: 5000 });
       } else {
         window.addEventListener("load", function () {
           setTimeout(function () {
@@ -43,7 +76,7 @@
             s.async = true;
             s.src = "//tfile.xiaoman.cn/okki/analyze.js?id=365757-33332-";
             document.body.appendChild(s);
-          }, 1500);
+          }, 2000);
         });
       }
     </script>

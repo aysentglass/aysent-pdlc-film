@@ -95,7 +95,7 @@ export default function Home() {
           className="pointer-events-none absolute -right-40 -top-40 h-[36rem] w-[36rem] rounded-full bg-[#1E5A96]/25 blur-3xl"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 1 }}
         />
         <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 px-4 py-20 sm:px-6 md:py-28 lg:min-h-[calc(100vh-4rem)] lg:grid-cols-2 lg:px-8">
           <motion.div style={{ opacity: heroFade }}>
@@ -113,14 +113,14 @@ export default function Home() {
                 <span key={line.words.join("")} className={`block ${line.accent ? "text-[#9CC4EC]" : ""}`}>
                   {line.words.map((word) => {
                     wordIndex += 1;
-                    const delay = 0.12 + wordIndex * 0.09;
+                    const delay = 0.05 + wordIndex * 0.05;
                     return (
                       <span key={word} className="inline-block overflow-hidden pb-1 align-bottom">
                         <motion.span
                           className="inline-block will-change-transform"
                           initial={{ y: "115%", rotate: 4 }}
                           animate={{ y: 0, rotate: 0 }}
-                          transition={{ duration: 0.85, delay, ease: heroEase }}
+                          transition={{ duration: 0.6, delay, ease: heroEase }}
                         >
                           {word}
                         </motion.span>
@@ -135,7 +135,7 @@ export default function Home() {
               className="mt-7 max-w-xl text-lg leading-relaxed text-white/70 md:text-xl"
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.55, ease: heroEase }}
+              transition={{ duration: 0.6, delay: 0.25, ease: heroEase }}
             >
               Switchable privacy film and smart glass engineered for offices, hotels, villas,
               automotive and curtain wall projects — direct from the source factory, with low MOQ
@@ -145,7 +145,7 @@ export default function Home() {
               className="mt-10 flex flex-wrap gap-4"
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.7, ease: heroEase }}
+              transition={{ duration: 0.6, delay: 0.35, ease: heroEase }}
             >
               <Link
                 to="/products"
@@ -165,7 +165,7 @@ export default function Home() {
               className="mt-14 grid grid-cols-3 gap-3 sm:gap-6 border-t border-white/15 pt-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.9, delay: 0.9 }}
+              transition={{ duration: 0.7, delay: 0.5 }}
             >
               {STATS.slice(0, 3).map((s) => (
                 <div key={s.label} className="min-w-0">
@@ -184,7 +184,7 @@ export default function Home() {
                 className="lg:translate-y-8"
                 initial={{ opacity: 0, y: 80 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.5, ease: heroEase }}
+                transition={{ duration: 0.8, delay: 0.2, ease: heroEase }}
               >
                 <ImagePlaceholder dark ratio="aspect-[4/5]" label="PDLC smart film ON state — crystal clear office glass" size="1000×1400" className="lg:min-h-[34rem]" src="/images/hero-on.webp" priority />
                 <p className="mt-3 text-center text-sm font-bold uppercase tracking-[0.2em] text-white/80">ON · Clear</p>
@@ -195,7 +195,7 @@ export default function Home() {
                 className="lg:-translate-y-8"
                 initial={{ opacity: 0, y: -80 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.65, ease: heroEase }}
+                transition={{ duration: 0.8, delay: 0.35, ease: heroEase }}
               >
                 <ImagePlaceholder dark ratio="aspect-[4/5]" label="PDLC smart film OFF state — frosted privacy glass wall" size="1000×1400" className="lg:min-h-[34rem]" src="/images/hero-off.webp" priority />
                 <p className="mt-3 text-center text-sm font-bold uppercase tracking-[0.2em] text-white/80">OFF · Frosted</p>
