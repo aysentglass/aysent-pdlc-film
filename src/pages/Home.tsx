@@ -68,11 +68,9 @@ export default function Home() {
     "AYSENT SMART FILM is a professional smart film manufacturer in China: PDLC smart glass film, self-adhesive switchable privacy film, laminated smart glass and accessories. Low MOQ, rapid prototyping, OEM/ODM and worldwide shipping."
   );
 
-  // scroll-linked parallax for the hero comparison images
+  // scroll-linked fade for hero text (lightweight, opacity-only)
   const heroRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
-  const yLeft = useTransform(scrollYProgress, [0, 1], [0, 100]);
-  const yRight = useTransform(scrollYProgress, [0, 1], [0, 150]);
   const heroFade = useTransform(scrollYProgress, [0, 0.9], [1, 0.25]);
 
   let wordIndex = -1;
@@ -180,9 +178,9 @@ export default function Home() {
               ))}
             </motion.dl>
           </motion.div>
-          {/* ON/OFF comparison — oversized with entrance + scroll parallax */}
+          {/* ON/OFF comparison — oversized with entrance animation */}
           <div className="grid grid-cols-2 gap-5 lg:gap-7">
-            <motion.div style={{ y: yLeft }} className="will-change-transform">
+            <div>
               <motion.div
                 className="lg:translate-y-8"
                 initial={{ opacity: 0, y: 80 }}
@@ -192,8 +190,8 @@ export default function Home() {
                 <ImagePlaceholder dark ratio="aspect-[4/5]" label="PDLC smart film ON state — crystal clear office glass" size="1000×1400" className="lg:min-h-[34rem]" src="/images/hero-on.webp" priority />
                 <p className="mt-3 text-center text-sm font-bold uppercase tracking-[0.2em] text-white/80">ON · Clear</p>
               </motion.div>
-            </motion.div>
-            <motion.div style={{ y: yRight }} className="will-change-transform">
+            </div>
+            <div>
               <motion.div
                 className="lg:-translate-y-8"
                 initial={{ opacity: 0, y: -80 }}
@@ -203,7 +201,7 @@ export default function Home() {
                 <ImagePlaceholder dark ratio="aspect-[4/5]" label="PDLC smart film OFF state — frosted privacy glass wall" size="1000×1400" className="lg:min-h-[34rem]" src="/images/hero-off.webp" priority />
                 <p className="mt-3 text-center text-sm font-bold uppercase tracking-[0.2em] text-white/80">OFF · Frosted</p>
               </motion.div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

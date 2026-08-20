@@ -1,5 +1,5 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { motion } from "framer-motion";
+import { useEffect, useState, type ReactNode } from "react";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { Reveal } from "./Reveal";
 
@@ -61,15 +61,10 @@ interface ParallaxBandProps {
 }
 
 export function ParallaxBand({ imageLabel, imageSize = "1920×900", eyebrow, title, desc, image }: ParallaxBandProps) {
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], ["-12%", "12%"]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1.08, 1]);
-
   return (
-    <section ref={ref} className="relative overflow-hidden bg-brand-dark text-white">
-      {/* parallax background */}
-      <motion.div style={{ y, scale }} className="absolute inset-x-0 -inset-y-[14%]">
+    <section className="relative overflow-hidden bg-brand-dark text-white">
+      {/* static background (no scroll-linked transforms to avoid forced reflow) */}
+      <div className="absolute inset-x-0 -inset-y-[14%]">
         <ImagePlaceholder
           dark
           label={imageLabel}
@@ -78,7 +73,7 @@ export function ParallaxBand({ imageLabel, imageSize = "1920×900", eyebrow, tit
           src={image}
           className="h-full w-full rounded-none border-0 bg-[#122A45] opacity-60"
         />
-      </motion.div>
+      </div>
       <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/75 via-brand-dark/35 to-brand-dark/75" aria-hidden="true" />
 
       {/* statement */}
