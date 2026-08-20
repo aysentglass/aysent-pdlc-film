@@ -6,6 +6,7 @@ import SectionHead from "@/components/SectionHead";
 import { Counter, Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { ClipReveal, ParallaxBand } from "@/components/motion/Premium";
 import { useSeo } from "@/components/Seo";
+import { AboutPageSchema, BreadcrumbSchema } from "@/components/Schema";
 
 const PRODUCTION_LINES = [
   { name: "Precision Coating Line", image: "/images/factory-coating.webp", desc: "Automated ITO coating and liquid-crystal filling lines ensure uniform film thickness and consistent optical performance across every roll." },
@@ -38,6 +39,13 @@ export default function About() {
 
   return (
     <>
+      <AboutPageSchema />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "About", url: "/about" },
+        ]}
+      />
       <PageHero
         eyebrow="About Us"
         title="A Decade of Focus on Smart Film"

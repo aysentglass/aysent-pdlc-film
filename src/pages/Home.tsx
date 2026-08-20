@@ -17,6 +17,7 @@ import SectionHead from "@/components/SectionHead";
 import { Counter, Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { ClipReveal, Marquee, ParallaxBand } from "@/components/motion/Premium";
 import { useSeo } from "@/components/Seo";
+import { WebSiteSchema, BreadcrumbSchema } from "@/components/Schema";
 import { ADVANTAGES, APPLICATIONS, PRODUCTS } from "@/lib/site";
 
 const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -78,6 +79,8 @@ export default function Home() {
 
   return (
     <>
+      <WebSiteSchema />
+      <BreadcrumbSchema items={[{ name: "Home", url: "/" }]} />
       {/* 2. Full-screen Hero Banner */}
       <section ref={heroRef} className="relative overflow-hidden bg-gradient-to-br from-brand via-brand to-brand-dark text-white">
         <div

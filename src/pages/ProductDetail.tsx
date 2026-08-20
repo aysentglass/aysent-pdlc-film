@@ -6,6 +6,7 @@ import SectionHead from "@/components/SectionHead";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { ClipReveal, ParallaxBand } from "@/components/motion/Premium";
 import { useSeo } from "@/components/Seo";
+import { ProductSchema, BreadcrumbSchema } from "@/components/Schema";
 import { APPLICATIONS, PRODUCTS } from "@/lib/site";
 
 export default function ProductDetail() {
@@ -25,6 +26,19 @@ export default function ProductDetail() {
 
   return (
     <>
+      <ProductSchema
+        name={product.name}
+        description={product.overview}
+        image={product.image}
+        slug={product.slug}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Products", url: "/products" },
+          { name: product.name, url: `/products/${product.slug}` },
+        ]}
+      />
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="border-b border-[#E2E8EE] bg-brand-light">
         <ol className="mx-auto flex max-w-7xl items-center gap-1.5 px-4 py-3.5 text-sm text-[#5A6B7C] sm:px-6 lg:px-8">

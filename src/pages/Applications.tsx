@@ -6,6 +6,7 @@ import PageHero from "@/components/PageHero";
 import { Reveal } from "@/components/motion/Reveal";
 import { ClipReveal } from "@/components/motion/Premium";
 import { useSeo } from "@/components/Seo";
+import { CollectionPageSchema, BreadcrumbSchema } from "@/components/Schema";
 import { APPLICATIONS, PRODUCTS } from "@/lib/site";
 
 export default function Applications() {
@@ -16,6 +17,17 @@ export default function Applications() {
 
   return (
     <>
+      <CollectionPageSchema
+        name="Smart Film Applications"
+        description="PDLC smart film applications in office partitions, hotels, villas, automotive and shopping mall curtain walls."
+        url="/applications"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Applications", url: "/applications" },
+        ]}
+      />
       <PageHero
         eyebrow="Applications"
         title="Where Smart Film Creates Value"

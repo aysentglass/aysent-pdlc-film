@@ -5,6 +5,7 @@ import CtaSection from "@/components/CtaSection";
 import PageHero from "@/components/PageHero";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { useSeo } from "@/components/Seo";
+import { CollectionPageSchema, BreadcrumbSchema } from "@/components/Schema";
 import { BLOG_POSTS } from "@/lib/site";
 
 export default function Blog() {
@@ -15,6 +16,17 @@ export default function Blog() {
 
   return (
     <>
+      <CollectionPageSchema
+        name="PDLC Smart Film Blog"
+        description="PDLC smart film guides, comparisons, installation tutorials and industry insights from AYSENT SMART FILM."
+        url="/blog"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Blog", url: "/blog" },
+        ]}
+      />
       <PageHero
         eyebrow="Industry Insights"
         title="Smart Film Insights"

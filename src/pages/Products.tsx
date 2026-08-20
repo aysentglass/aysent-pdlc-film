@@ -6,6 +6,7 @@ import PageHero from "@/components/PageHero";
 import { Reveal } from "@/components/motion/Reveal";
 import { ClipReveal } from "@/components/motion/Premium";
 import { useSeo } from "@/components/Seo";
+import { CollectionPageSchema, BreadcrumbSchema } from "@/components/Schema";
 import { PRODUCTS } from "@/lib/site";
 
 export default function Products() {
@@ -16,6 +17,17 @@ export default function Products() {
 
   return (
     <>
+      <CollectionPageSchema
+        name="PDLC Smart Film Products"
+        description="PDLC smart film rolls, self-adhesive switchable film, laminated smart glass and control accessories from AYSENT SMART FILM."
+        url="/products"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Products", url: "/products" },
+        ]}
+      />
       <PageHero
         eyebrow="Our Products"
         title="Smart Film Products"

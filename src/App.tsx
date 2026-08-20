@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Home from "@/pages/Home";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import { OrganizationSchema } from "@/components/Schema";
 
 // Lazy-load non-home routes so they are fetched only when navigated to.
 // This keeps the initial JS bundle small and improves first-paint speed.
@@ -45,6 +46,7 @@ function ScrollManager() {
 export default function App() {
   return (
     <div className="flex min-h-screen flex-col bg-white text-[#1B2A3A]">
+      <OrganizationSchema />
       <ScrollManager />
       <Navbar />
       <main className="flex-1 pt-16">

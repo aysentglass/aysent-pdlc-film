@@ -4,6 +4,7 @@ import CtaSection from "@/components/CtaSection";
 import PageHero from "@/components/PageHero";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { useSeo } from "@/components/Seo";
+import { FaqSchema, BreadcrumbSchema } from "@/components/Schema";
 import { FAQS } from "@/lib/site";
 
 export default function Faq() {
@@ -16,6 +17,13 @@ export default function Faq() {
 
   return (
     <>
+      <FaqSchema faqs={FAQS} />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "FAQ", url: "/faq" },
+        ]}
+      />
       <PageHero
         eyebrow="Buyer FAQ"
         title="Frequently Asked Questions"

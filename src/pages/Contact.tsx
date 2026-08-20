@@ -4,6 +4,7 @@ import InquiryForm from "@/components/InquiryForm";
 import PageHero from "@/components/PageHero";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { useSeo } from "@/components/Seo";
+import { ContactPageSchema, BreadcrumbSchema } from "@/components/Schema";
 import { BRAND } from "@/lib/site";
 
 const CONTACT_CARDS = [
@@ -41,6 +42,13 @@ export default function Contact() {
 
   return (
     <>
+      <ContactPageSchema />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Contact", url: "/contact" },
+        ]}
+      />
       <PageHero
         eyebrow="Contact Us"
         title="Let's Talk About Your Project"

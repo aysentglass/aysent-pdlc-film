@@ -5,6 +5,7 @@ import CtaSection from "@/components/CtaSection";
 import { Reveal } from "@/components/motion/Reveal";
 import { ClipReveal } from "@/components/motion/Premium";
 import { useSeo } from "@/components/Seo";
+import { ArticleSchema, BreadcrumbSchema } from "@/components/Schema";
 import { BLOG_POSTS } from "@/lib/site";
 
 export default function BlogPost() {
@@ -20,6 +21,20 @@ export default function BlogPost() {
 
   return (
     <>
+      <ArticleSchema
+        title={post.title}
+        description={post.excerpt}
+        image={post.image}
+        datePublished={post.date}
+        slug={post.slug}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Blog", url: "/blog" },
+          { name: post.title, url: `/blog/${post.slug}` },
+        ]}
+      />
       <nav aria-label="Breadcrumb" className="border-b border-[#E2E8EE] bg-brand-light">
         <ol className="mx-auto flex max-w-4xl items-center gap-1.5 px-4 py-3.5 text-sm text-[#5A6B7C] sm:px-6 lg:px-8">
           <li><Link to="/" className="hover:text-brand-accent">Home</Link></li>
