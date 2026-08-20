@@ -23,11 +23,13 @@ export default defineConfig(({ mode }) => ({
     target: 'es2022',
     cssMinify: true,
     minify: 'esbuild',
+    assetsInlineLimit: 4096,
     rollupOptions: {
       output: {
         manualChunks: {
           // Split large vendor libraries into separate cacheable chunks
-          'react-vendor': ['react', 'react-dom', 'react-router'],
+          'react-vendor': ['react', 'react-dom'],
+          'router': ['react-router'],
           'motion': ['framer-motion'],
           'icons': ['lucide-react'],
         },

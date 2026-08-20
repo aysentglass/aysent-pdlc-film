@@ -166,6 +166,22 @@ async function main() {
   const template = readFileSync(join(distDir, "index.html"), "utf-8");
   const routes = buildAllRoutes();
 
+  // Inline CSS to eliminate render-blocking request
+  let baseHtml = template;
+  const cssMatch = template.match(/<link[^>]*rel="stylesheet"[^>]*href="([^"]+)"[^>]*>/);
+  if (cssMatch) {
+    const cssPath = cssMatch[1].replace(/^\//, "");
+    const cssFile = join(distDir, cssPath);
+    if (existsSync(cssFile)) {
+      const cssContent = readFileSync(cssFile, "utf-8");
+      baseHtml = template.replace(
+        cssMatch[0],
+        `<style>${cssContent}</style>`
+      );
+      console.log(`[prerender] Inlined CSS (${Math.round(cssContent.length / 1024)} KB)`);
+    }
+  }
+
   console.log(`[prerender] Rendering ${routes.length} routes...`);
 
   for (const route of routes) {
@@ -175,14 +191,14 @@ async function main() {
       // Inject rendered app into the root div using precise string positioning
       // (regex fails because skeleton contains nested </div> tags)
       const rootOpen = "<div id=\"root\">";
-      const rootStart = template.indexOf(rootOpen);
-      const scriptStart = template.indexOf("<script type=\"module\"", rootStart);
+      const rootStart = baseHtml.indexOf(rootOpen);
+      const scriptStart = baseHtml.indexOf("<script type=\"module\"", rootStart);
       // Find the </div> immediately before the script tag
-      const closingDiv = template.lastIndexOf("</div>", scriptStart);
+      const closingDiv = baseHtml.lastIndexOf("</div>", scriptStart);
       let html =
-        template.substring(0, rootStart + rootOpen.length) +
+        baseHtml.substring(0, rootStart + rootOpen.length) +
         appHtml +
-        template.substring(closingDiv);
+        baseHtml.substring(closingDiv);
 
       // Set page title
       html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${route.title}</title>`);
