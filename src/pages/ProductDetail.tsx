@@ -1,12 +1,13 @@
 import { Link, Navigate, useParams } from "react-router";
-import { ArrowUpRight, CheckCircle2, ChevronRight, MessageSquareQuote } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, ChevronRight, HelpCircle, MessageSquareQuote, Plus } from "lucide-react";
+import { useState } from "react";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import CtaSection from "@/components/CtaSection";
 import SectionHead from "@/components/SectionHead";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { ClipReveal, ParallaxBand } from "@/components/motion/Premium";
 import { useSeo } from "@/components/Seo";
-import { ProductSchema, BreadcrumbSchema } from "@/components/Schema";
+import { ProductSchema, BreadcrumbSchema, FaqSchema } from "@/components/Schema";
 import { APPLICATIONS, PRODUCTS } from "@/lib/site";
 
 export default function ProductDetail() {
@@ -32,6 +33,7 @@ export default function ProductDetail() {
         image={product.image}
         slug={product.slug}
       />
+      {product.faq && <FaqSchema faqs={product.faq.map((f) => ({ q: f.question, a: f.answer }))} />}
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "/" },
@@ -176,6 +178,21 @@ export default function ProductDetail() {
         </div>
       </section>
 
+      {product.faq && product.faq.length > 0 && (
+        <section className="bg-white py-16 md:py-24">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <SectionHead align="left" eyebrow="Support" title="Frequently Asked Questions" />
+            </Reveal>
+            <Reveal delay={0.1} className="mt-10 space-y-3">
+              {product.faq.map((faq, i) => (
+                <ProductFaqItem key={i} question={faq.question} answer={faq.answer} />
+              ))}
+            </Reveal>
+          </div>
+        </section>
+      )}
+
       {/* Bottom inquiry */}
       <CtaSection
         title={`Get a Quote for ${product.name}`}
@@ -183,5 +200,29 @@ export default function ProductDetail() {
         productName={product.name}
       />
     </>
+  );
+}
+
+function ProductFaqItem({ question, answer }: { question: string; answer: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border border-[#E2E8EE] bg-[#F8FAFC] transition-all duration-300 hover:border-brand-accent/40">
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex w-full items-center justify-between gap-4 p-5 text-left"
+        aria-expanded={open}
+      >
+        <span className="flex items-start gap-3 text-base font-bold text-[#0B2A4A] md:text-lg">
+          <HelpCircle className="mt-0.5 h-5 w-5 shrink-0 text-brand-accent" />
+          {question}
+        </span>
+        <Plus className={`h-5 w-5 shrink-0 text-brand-accent transition-transform duration-300 ${open ? "rotate-45" : ""}`} />
+      </button>
+      {open && (
+        <div className="border-t border-[#E2E8EE] px-5 pb-5 pt-4 pl-13">
+          <p className="text-base leading-relaxed text-[#5A6B7C]">{answer}</p>
+        </div>
+      )}
+    </div>
   );
 }

@@ -1,11 +1,12 @@
 import { Link, Navigate, useParams } from "react-router";
-import { CalendarDays, CheckCircle2, ChevronRight, Clock } from "lucide-react";
+import { CalendarDays, CheckCircle2, ChevronRight, Clock, HelpCircle, Plus } from "lucide-react";
+import { useState } from "react";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import CtaSection from "@/components/CtaSection";
 import { Reveal } from "@/components/motion/Reveal";
 import { ClipReveal } from "@/components/motion/Premium";
 import { useSeo } from "@/components/Seo";
-import { ArticleSchema, BreadcrumbSchema } from "@/components/Schema";
+import { ArticleSchema, BreadcrumbSchema, FaqSchema } from "@/components/Schema";
 import { BLOG_POSTS } from "@/lib/site";
 
 export default function BlogPost() {
@@ -28,6 +29,7 @@ export default function BlogPost() {
         datePublished={post.date}
         slug={post.slug}
       />
+      {post.faq && <FaqSchema faqs={post.faq.map((f) => ({ q: f.question, a: f.answer }))} />}
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "/" },
@@ -97,6 +99,22 @@ export default function BlogPost() {
             ))}
           </div>
 
+          {post.faq && post.faq.length > 0 && (
+            <Reveal distance={32} className="mt-16">
+              <div className="border-t border-[#E2E8EE] pt-12">
+                <h2 className="mb-8 flex items-center gap-3 text-2xl font-extrabold tracking-tight text-[#0B2A4A] md:text-3xl">
+                  <HelpCircle className="h-7 w-7 text-brand-accent" />
+                  Frequently Asked Questions
+                </h2>
+                <div className="space-y-3">
+                  {post.faq.map((faq, i) => (
+                    <FaqItem key={i} question={faq.question} answer={faq.answer} />
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          )}
+
           <Reveal distance={32} className="mt-14 bg-brand p-8 text-white sm:p-10">
             <h2 className="text-2xl font-extrabold tracking-tight md:text-3xl">Source Smart Film Directly from the Factory</h2>
             <p className="mt-3 max-w-2xl leading-relaxed text-white/75">
@@ -121,5 +139,26 @@ export default function BlogPost() {
         subtitle="Send your requirements now — quotation and sample offer within 24 hours."
       />
     </>
+  );
+}
+
+function FaqItem({ question, answer }: { question: string; answer: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border border-[#E2E8EE] bg-white transition-all duration-300 hover:border-brand-accent/40">
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex w-full items-center justify-between gap-4 p-5 text-left"
+        aria-expanded={open}
+      >
+        <span className="text-base font-bold text-[#0B2A4A] md:text-lg">{question}</span>
+        <Plus className={`h-5 w-5 shrink-0 text-brand-accent transition-transform duration-300 ${open ? "rotate-45" : ""}`} />
+      </button>
+      {open && (
+        <div className="border-t border-[#E2E8EE] px-5 pb-5 pt-4">
+          <p className="text-base leading-relaxed text-[#5A6B7C]">{answer}</p>
+        </div>
+      )}
+    </div>
   );
 }
