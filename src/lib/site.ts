@@ -322,7 +322,7 @@ export const APPLICATIONS: Application[] = [
     name: "Villas & Homes",
     pain: "Large windows and glass doors expose interiors to views and sunlight; curtains and blinds block light and need cleaning.",
     solution:
-      "Switchable film on windows, doors and skylights replaces curtains: transparent when you want the view, frosted when you want privacy, with 98% UV blocking and smart-home control integration.",
+      "Switchable film on windows, doors and skylights replaces curtains: transparent when you want the view, frosted when you want privacy, with 99% UV blocking and smart-home control integration.",
     products: ["self-adhesive-smart-film", "pdlc-smart-film"],
     image: "/images/app-villa.webp",
     imageAlt: "Villa windows with switchable smart film for privacy",
@@ -346,6 +346,76 @@ export const APPLICATIONS: Application[] = [
     products: ["switchable-laminated-glass", "smart-film-accessories"],
     image: "/images/app-mall.webp",
     imageAlt: "Smart glass curtain wall facade on a shopping mall",
+  },
+  {
+    slug: "luxury-villas",
+    name: "Luxury Villas",
+    pain: "High-end villa owners demand uncompromised privacy for floor-to-ceiling windows and pool areas, while preserving panoramic views and natural light during the day.",
+    solution:
+      "Switchable smart film transforms villa glass walls, pool enclosures and bathroom partitions into instant privacy zones — controlled via wall switch, smartphone app or smart home automation. 99% UV protection preserves furniture and artwork, while the frosted state doubles as a home cinema projection screen.",
+    products: ["self-adhesive-smart-film", "switchable-laminated-glass", "smart-film-accessories"],
+    image: "/images/app-luxury-villa.webp",
+    imageAlt: "Luxury villa with switchable smart film on floor-to-ceiling windows",
+  },
+  {
+    slug: "public-spaces",
+    name: "Public Spaces & Institutions",
+    pain: "Museums, galleries, schools, hospitals and government buildings need flexible spaces that balance public access with privacy for sensitive areas, meetings and exhibitions.",
+    solution:
+      "PDLC smart film enables on-demand privacy in conference rooms, exhibition halls, medical consultation areas and administrative offices. In museums, frosted glass becomes projection surfaces for immersive exhibits; in schools, it transforms classrooms into multi-use spaces. Low power consumption and 15+ year lifespan make it ideal for high-traffic public buildings.",
+    products: ["pdlc-smart-film", "self-adhesive-smart-film", "switchable-laminated-glass"],
+    image: "/images/app-public-space.webp",
+    imageAlt: "Smart glass in a modern museum exhibition hall",
+  },
+  {
+    slug: "streetscape-storefronts",
+    name: "Streetscape & Storefronts",
+    pain: "Retail storefronts and street-facing glass need to attract customers by day and secure the interior after hours, while managing glare and heat from direct sunlight.",
+    solution:
+      "Switchable film on storefront windows transitions from transparent display windows by day to frosted privacy panels at night — eliminating the need for roller shutters or curtains. The frosted state serves as a rear-projection surface for dynamic window displays and advertising, turning the facade into a digital marketing canvas.",
+    products: ["self-adhesive-smart-film", "switchable-laminated-glass", "smart-film-accessories"],
+    image: "/images/app-streetscape.webp",
+    imageAlt: "Retail storefront with switchable smart film display windows",
+  },
+  {
+    slug: "cafes-bars-restaurants",
+    name: "Cafes, Bars & Restaurants",
+    pain: "Hospitality venues need flexible dining areas that can switch between open social spaces and private booths, while managing street-level glare and creating ambiance.",
+    solution:
+      "Smart film on partition walls and exterior windows lets cafes and bars instantly create private dining areas, VIP sections or meeting nooks. Dimmable control sets the mood from bright and open to intimate and secluded. The frosted mode also works as a projection surface for menu displays, brand visuals and event promotions.",
+    products: ["self-adhesive-smart-film", "pdlc-smart-film", "smart-film-accessories"],
+    image: "/images/app-cafe-bar.webp",
+    imageAlt: "Modern cafe interior with switchable glass partitions",
+  },
+  {
+    slug: "residential-living-rooms",
+    name: "Residential Living Rooms",
+    pain: "Open-plan living spaces with large glass walls lack privacy from neighbors and passersby, while traditional blinds and curtains clutter the design and block natural light.",
+    solution:
+      "Self-adhesive smart film retrofits onto existing living room windows and glass partitions, providing instant privacy with a single tap. It integrates with smart home systems (Alexa, Google Home, Apple HomeKit) for voice or scheduled control, blocks 99% of UV rays to protect interiors, and in frosted mode becomes a home theater projection screen — replacing both curtains and TV screens.",
+    products: ["self-adhesive-smart-film", "smart-film-accessories"],
+    image: "/images/app-living-room.webp",
+    imageAlt: "Modern living room with smart film on large glass windows",
+  },
+  {
+    slug: "banking-financial",
+    name: "Banking & Financial Institutions",
+    pain: "Banks and financial offices require secure, private spaces for client consultations and vault areas, while maintaining an open, transparent and modern brand image in public zones.",
+    solution:
+      "Switchable laminated glass provides bullet-resistant security combined with on-demand privacy for consultation rooms, manager offices and cash-handling areas. The transparent state conveys openness and trust in customer-facing zones; the frosted state ensures complete confidentiality during private meetings. Integrated access control can automatically switch glass to frosted when a room is occupied.",
+    products: ["switchable-laminated-glass", "pdlc-smart-film", "smart-film-accessories"],
+    image: "/images/app-banking.webp",
+    imageAlt: "Modern bank interior with switchable privacy glass partitions",
+  },
+  {
+    slug: "building-facades",
+    name: "Building Facades & Curtain Walls",
+    pain: "Commercial building facades face excessive solar heat gain and glare, reducing occupant comfort and increasing HVAC costs, while static tinted glass compromises natural light and views.",
+    solution:
+      "Switchable laminated glass curtain walls dynamically adjust transparency throughout the day — clear for views and daylight in the morning, frosted for solar control during peak sun hours. The system reduces cooling energy by up to 25%, blocks 99% UV and 68–75% infrared heat, and transforms the building exterior into a programmable media facade for branding and light shows after dark.",
+    products: ["switchable-laminated-glass", "smart-film-accessories"],
+    image: "/images/app-building-facade.webp",
+    imageAlt: "Modern commercial building with switchable smart glass curtain wall facade",
   },
 ];
 
