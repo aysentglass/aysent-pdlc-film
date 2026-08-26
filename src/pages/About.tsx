@@ -23,7 +23,7 @@ const STATS = [
   { value: 500, suffix: "+", label: "B2B Clients Served" },
 ];
 
-const CERTS = ["ISO9001", "CE", "RoHS"];
+const CERTS = ["CE", "RoHS", "FCC", "INTERTEK"];
 
 const MARKETS = [
   { region: "Europe & North America", desc: "Distributors, glass processors and contractors in Germany, the UK, the US, Canada and 20+ other markets." },
@@ -34,7 +34,7 @@ const MARKETS = [
 export default function About() {
   useSeo(
     "About Us | 10-Year Smart Film Manufacturer & Factory — AYSENT SMART FILM",
-    "AYSENT SMART FILM is an ISO9001, CE and RoHS certified smart film manufacturer with 10 years of experience, 50,000 m² monthly capacity and exports to 40+ countries under FOB/CIF/EXW terms."
+    "AYSENT SMART FILM is a CE, RoHS, FCC certified smart film manufacturer with INTERTEK test reports, 10+ years of experience, 50,000 m² monthly capacity and exports to 50+ countries under FOB/CIF/EXW terms."
   );
 
   return (
@@ -153,11 +153,12 @@ export default function About() {
                   <BadgeCheck className="h-7 w-7" />
                 </span>
                 <div>
-                  <h3 className="text-xl font-extrabold tracking-tight text-[#0B2A4A]">{c} Certified</h3>
+                  <h3 className="text-xl font-extrabold tracking-tight text-[#0B2A4A]">{c}</h3>
                   <p className="text-sm text-[#5A6B7C]">
-                    {c === "ISO9001" && "Quality management system"}
                     {c === "CE" && "European safety conformity"}
                     {c === "RoHS" && "Hazardous substances free"}
+                    {c === "FCC" && "US electromagnetic compliance"}
+                    {c === "INTERTEK" && "Independent third-party test reports"}
                   </p>
                 </div>
                 </div>

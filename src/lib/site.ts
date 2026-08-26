@@ -225,7 +225,7 @@ export const PRODUCTS: Product[] = [
       { label: "Control Options", value: "Wall switch / RF remote / Wi-Fi app / voice assistant" },
       { label: "Dimming Range", value: "0–100% stepless (with dimming module)" },
       { label: "Smart Home Integration", value: "Alexa / Google Home / Apple HomeKit / Mi Home / Huawei" },
-      { label: "Certifications", value: "CE / RoHS / FCC / PSE" },
+      { label: "Certifications", value: "CE / RoHS / FCC / INTERTEK test reports" },
       { label: "Warranty", value: "2 years (electronics)" },
     ],
     features: [
@@ -245,7 +245,7 @@ export const PRODUCTS: Product[] = [
     faq: [
       { question: "What accessories are needed for a PDLC smart film installation?", answer: "Every installation requires: a power transformer (sized to the total film area), a control method (wall switch, remote, or Wi-Fi module), two-core electrical wire, and optionally a dimming controller. AYSENT SMART FILM provides all these as a complete system, ensuring compatibility." },
       { question: "How do I choose the right transformer size?", answer: "Transformer wattage should be 8–10W per square meter of film area, with safety margin. PDLC film uses 3.2W/㎡/h, so a 100W transformer covers about 10–12 m². We recommend sizing up for safety margin and future expansion. Standard transformer power ratings: 30W / 50W / 100W / 200W / 300W / 500W." },
-      { question: "Can I use third-party transformers with AYSENT film?", answer: "We strongly recommend using AYSENT-supplied transformers. Mismatched voltage (must be 48–65V AC, nominal 60V) or poor-quality transformers are the leading cause of premature film failure and will void the warranty. Our transformers are CE/FCC/RoHS/PSE certified and matched to our film specifications." },
+      { question: "Can I use third-party transformers with AYSENT film?", answer: "We strongly recommend using AYSENT-supplied transformers. Mismatched voltage (must be 48–65V AC, nominal 60V) or poor-quality transformers are the leading cause of premature film failure and will void the warranty. Our transformers are CE/RoHS/FCC certified with INTERTEK test reports and matched to our film specifications." },
       { question: "What control options are available for smart film?", answer: "Options include: basic wall switch, RF remote control, Wi-Fi app control (iOS/Android), voice assistant integration (Alexa/Google Home), stepless dimming controllers, and building automation system (BMS) integration via API." },
       { question: "Can smart film be integrated with smart home systems?", answer: "Yes. Our Wi-Fi control modules support integration with major smart home ecosystems including Alexa, Google Home, Apple HomeKit (via bridge), and custom automation via REST API. Multiple zones can be grouped and scheduled." },
       { question: "What is the warranty on smart film accessories?", answer: "Electronic accessories (transformers, controllers) carry a 2-year warranty. We maintain long-term spare parts availability for project maintenance. Extended warranty options are available for commercial projects." },
@@ -262,7 +262,7 @@ export const ADVANTAGES = [
   {
     icon: "BadgeCheck",
     title: "Full Certifications",
-    text: "CE, RoHS, FCC, PSE, UL94 V0, REACH and SGS test reports — ready for European, American, Japanese and Middle East markets.",
+    text: "CE, RoHS, FCC and INTERTEK test reports — ready for European, American and global markets.",
   },
   {
     icon: "FlaskConical",
@@ -460,7 +460,7 @@ export const FAQS = [
   },
   {
     q: "How do you pack and ship the products?",
-    a: "Film rolls are packed in hard paper tubes with protective film, then in reinforced export cartons; laminated glass is packed in fumigation-free plywood crates with foam protection. We arrange sea freight, air freight and express (DHL/FedEx/UPS) and provide full customs clearance documents (packing list, commercial invoice, certificate of origin, CE/RoHS/FCC/PSE certificates).",
+    a: "Film rolls are packed in hard paper tubes with protective film, then in reinforced export cartons; laminated glass is packed in fumigation-free plywood crates with foam protection. We arrange sea freight, air freight and express (DHL/FedEx/UPS) and provide full customs clearance documents (packing list, commercial invoice, certificate of origin, CE/RoHS/FCC certificates and INTERTEK test reports).",
   },
   {
     q: "Which countries do you export to?",
@@ -541,7 +541,7 @@ export const BLOG_POSTS: BlogPost[] = [
         list: [
           "Transmittance: T7 grade offers 89.5–92% parallel-light transmittance (the industry standard for clarity); ask for test reports, not just catalogue values. Beware of suppliers who quote 'total light transmittance' which is ~3% higher than parallel light.",
           "Haze: low haze (<2% ON) means a clear view without milkiness; high haze in OFF state (up to 100%) means real privacy.",
-          "Operating voltage and safety: 48–65V AC systems (nominal 60V) are standard and safe; confirm the transformer carries CE/FCC/RoHS/PSE certification.",
+          "Operating voltage and safety: 48–65V AC systems (nominal 60V) are standard and safe; confirm the transformer carries CE/RoHS/FCC certification and INTERTEK test reports.",
           "Width capability: leading factories offer roll widths up to 1,800 mm standard (2,100 mm ultra-wide), which determines the maximum seamless panel size.",
           "Lifespan and warranty: look for 15+ year rated lifespan (lab tested) and at least a 5-year warranty — most competitors only offer 2 years.",
           "Viewing angle: 165° ultra-wide angle means the glass stays clear even from the side; many competitors only offer 145°.",
@@ -1292,7 +1292,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Factors That Extend Lifespan",
         list: [
-          "Quality film: choose manufacturers with 15+ year lab-tested rating and CE/FCC/RoHS/PSE certification",
+          "Quality film: choose manufacturers with 15+ year lab-tested rating and CE/RoHS/FCC certification and INTERTEK test reports",
           "Professional installation: proper cleaning (dry application), edge sealing, and correct bus bar connection",
           "Matching transformer: always use 48-65V AC (nominal 60V) as specified by the manufacturer",
           "Climate control: operating within -30°C to 90°C range",
@@ -1352,7 +1352,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { question: "What is the warranty on AYSENT SMART FILM products?", answer: "AYSENT SMART FILM offers a 5-year global warranty on PDLC smart film and switchable laminated glass, covering manufacturing defects, delamination, dead zones, natural yellowing and switching failure. This far exceeds the industry average of 2 years. Electronic accessories carry a 2-year warranty." },
       { question: "Does heat from sunlight reduce PDLC film lifespan?", answer: "Prolonged temperatures above 90°C can accelerate aging. AYSENT film operates safely within -30°C to 90°C, far beyond the typical -20°C to 70°C industry range. For exterior or south-facing glass, use low-E coating or UV-blocking window film to reduce heat load." },
       { question: "Is it normal for PDLC film to yellow over time?", answer: "Slight yellowing after 10+ years is normal for any polymer product exposed to UV and oxygen. Quality films with UV stabilizers yellow very slowly. The yellowing is cosmetic and does not affect switching performance. Laminated glass with UV-blocking interlayers shows virtually no yellowing." },
-      { question: "How do I know if my film is quality or cheap?", answer: "Check for: CE/FCC/RoHS/PSE certification, optical test reports (not just catalogue specs), 15+ year lab-tested lifespan, 5-year manufacturer warranty, factory audit reports, and the 3-year failure rate. Cheap films often lack certification, have inconsistent quality, and fail in 3-5 years." },
+      { question: "How do I know if my film is quality or cheap?", answer: "Check for: CE/RoHS/FCC certification and INTERTEK test reports, optical test reports (not just catalogue specs), 15+ year lab-tested lifespan, 5-year manufacturer warranty, factory audit reports, and the 3-year failure rate. Cheap films often lack certification, have inconsistent quality, and fail in 3-5 years." },
     ],
   },
   {
