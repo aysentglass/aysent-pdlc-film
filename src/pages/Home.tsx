@@ -40,7 +40,6 @@ const CERTS = [
    { name: "CE",  image: "/images/cert-ce.webp", desc: "Compliant with European safety standards" },
   { name: "RoHS", image: "/images/cert-rohs.webp", desc: "Restriction of hazardous substances certified" },
   { name: "FCC",  image: "/images/cert-fcc.webp", desc: "Compliant with US electromagnetic interference & radio frequency standards" },
-  { name: "INTERTEK", image: "/images/cert-fcc.webp", desc: "Independent third-party test reports for product quality and safety" },
 ];
 
 const OEM_STEPS = ["Requirements", "Sampling", "Confirmation", "Mass Production", "Delivery"];
