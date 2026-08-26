@@ -417,6 +417,16 @@ export const APPLICATIONS: Application[] = [
     image: "/images/app-building-facade.webp",
     imageAlt: "Modern commercial building with switchable smart glass curtain wall facade",
   },
+  {
+    slug: "hospitals-medical",
+    name: "Hospitals & Medical Facilities",
+    pain: "Hospitals and clinics require instant privacy for patient consultations, examination rooms, ICU wards and operating areas, while maintaining natural light, hygiene and easy disinfection — traditional curtains and blinds harbor bacteria and are difficult to clean.",
+    solution:
+      "Switchable smart film on glass partitions and windows provides one-touch patient privacy with a smooth, non-porous surface that can be wiped and disinfected repeatedly. In consultation rooms, the frosted state doubles as a projection surface for medical imaging and patient education. The film blocks 99% of UV rays to protect sensitive equipment and medications, and integrates with hospital access control systems to automatically switch to privacy mode when a room is occupied.",
+    products: ["self-adhesive-smart-film", "switchable-laminated-glass", "smart-film-accessories"],
+    image: "/images/app-hospital.webp",
+    imageAlt: "Modern hospital with switchable smart glass in patient rooms and consultation areas",
+  },
 ];
 
 export const FAQS = [

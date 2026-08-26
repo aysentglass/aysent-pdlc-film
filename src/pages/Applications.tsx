@@ -11,15 +11,15 @@ import { APPLICATIONS, PRODUCTS } from "@/lib/site";
 
 export default function Applications() {
   useSeo(
-    "Smart Film Applications | Office, Hotel, Villa, Retail, Bank & Facade — AYSENT SMART FILM",
-    "Explore 12 PDLC smart film applications: office partitions, hotels, luxury villas, automotive, shopping malls, public spaces, storefronts, cafes, living rooms, banking and building facades — with recommended products for each scenario."
+    "Smart Film Applications | Office, Hotel, Villa, Hospital, Bank & Facade — AYSENT SMART FILM",
+    "Explore 13 PDLC smart film applications: office partitions, hotels, luxury villas, automotive, shopping malls, public spaces, storefronts, cafes, living rooms, banking, hospitals and building facades — with recommended products for each scenario."
   );
 
   return (
     <>
       <CollectionPageSchema
         name="Smart Film Applications"
-        description="PDLC smart film applications across 12 industries: office partitions, hotels, luxury villas, automotive, shopping malls, public spaces, storefronts, cafes, living rooms, banking and building facades."
+        description="PDLC smart film applications across 13 industries: office partitions, hotels, luxury villas, automotive, shopping malls, public spaces, storefronts, cafes, living rooms, banking, hospitals and building facades."
         url="/applications"
       />
       <BreadcrumbSchema
@@ -31,7 +31,7 @@ export default function Applications() {
       <PageHero
         eyebrow="Applications"
         title="Where Smart Film Creates Value"
-        desc="One technology, twelve industries. Explore how switchable privacy film solves real problems in each scenario — and which product fits best."
+        desc="One technology, thirteen industries. Explore how switchable privacy film solves real problems in each scenario — and which product fits best."
       />
 
       {APPLICATIONS.map((app, idx) => {
