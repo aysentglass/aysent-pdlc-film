@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  AYSENT SMART FILM — sitemap-images.xml
+  Image sitemap for Google, Bing, Yandex image search
+  Last updated: 2026-08-28
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.aysentglass.com/</loc>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/hero-on.webp</image:loc>
+      <image:title>AYSENT PDLC Smart Film — ON state transparent</image:title>
+      <image:caption>PDLC smart film in transparent ON state, showing clear glass partition</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/hero-off.webp</image:loc>
+      <image:title>AYSENT PDLC Smart Film — OFF state frosted</image:title>
+      <image:caption>PDLC smart film in frosted OFF state, providing complete privacy</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.aysentglass.com/products/pdlc-smart-film</loc>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/product-pdlc.webp</image:loc>
+      <image:title>PDLC Smart Film Roll</image:title>
+      <image:caption>Roll-form PDLC switchable privacy film for lamination and custom projects</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.aysentglass.com/products/self-adhesive-smart-film</loc>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/product-adhesive.webp</image:loc>
+      <image:title>Self-Adhesive PDLC Smart Film</image:title>
+      <image:caption>Peel-and-stick self-adhesive switchable privacy film for retrofit on existing glass</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.aysentglass.com/products/switchable-laminated-glass</loc>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/product-laminated.webp</image:loc>
+      <image:title>Switchable Laminated Smart Glass</image:title>
+      <image:caption>Factory-finished switchable laminated glass panels ready for installation</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.aysentglass.com/products/smart-film-accessories</loc>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/product-accessories.webp</image:loc>
+      <image:title>Smart Film Accessories</image:title>
+      <image:caption>PDLC smart film transformers, remote controls and installation accessories</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.aysentglass.com/applications</loc>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/app-office.webp</image:loc>
+      <image:title>Smart Film Office Partitions</image:title>
+      <image:caption>Switchable privacy film on office glass partition walls</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/app-hotel.webp</image:loc>
+      <image:title>Smart Film Hotel Bathrooms</image:title>
+      <image:caption>Smart glass bathroom partition in a luxury hotel suite</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/app-villa.webp</image:loc>
+      <image:title>Smart Film Villa Windows</image:title>
+      <image:caption>Villa windows with switchable smart film for privacy and UV protection</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/app-automotive.webp</image:loc>
+      <image:title>Smart Film Automotive</image:title>
+      <image:caption>Switchable smart film on automotive sunroof and windows</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/app-mall.webp</image:loc>
+      <image:title>Smart Glass Shopping Mall Curtain Wall</image:title>
+      <image:caption>Smart glass curtain wall facade on a shopping mall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/app-luxury-villa.webp</image:loc>
+      <image:title>Luxury Villa Smart Film</image:title>
+      <image:caption>Luxury villa with switchable smart film on floor-to-ceiling windows</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/app-public-space.webp</image:loc>
+      <image:title>Smart Film Public Spaces</image:title>
+      <image:caption>Modern museum exhibition hall with switchable smart glass walls</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/app-streetscape.webp</image:loc>
+      <image:title>Smart Film Storefronts</image:title>
+      <image:caption>Retail storefront with switchable smart film display windows</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/app-cafe-bar.webp</image:loc>
+      <image:title>Smart Film Cafes and Bars</image:title>
+      <image:caption>Modern cafe interior with switchable glass partitions</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/app-living-room.webp</image:loc>
+      <image:title>Smart Film Living Room</image:title>
+      <image:caption>Modern living room with smart film on large glass windows</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/app-banking.webp</image:loc>
+      <image:title>Smart Film Banking</image:title>
+      <image:caption>Modern bank interior with switchable privacy glass partitions</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/app-building-facade.webp</image:loc>
+      <image:title>Smart Glass Building Facade</image:title>
+      <image:caption>Modern commercial building with switchable smart glass curtain wall</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/app-hospital.webp</image:loc>
+      <image:title>Smart Film Hospitals</image:title>
+      <image:caption>Hospital with switchable smart glass in patient rooms and consultation areas</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.aysentglass.com/about</loc>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/factory-building.webp</image:loc>
+      <image:title>AYSENT SMART FILM Factory</image:title>
+      <image:caption>AYSENT PDLC smart film manufacturing facility in Shandong, China</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/factory-coating.webp</image:loc>
+      <image:title>PDLC Film Coating Line</image:title>
+      <image:caption>Automated PDLC smart film coating production line</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/factory-lamination.webp</image:loc>
+      <image:title>Smart Glass Lamination</image:title>
+      <image:caption>Switchable laminated glass production and lamination process</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/factory-qc.webp</image:loc>
+      <image:title>Quality Control</image:title>
+      <image:caption>PDLC smart film quality control and testing at AYSENT factory</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.aysentglass.com/blog/what-is-pdlc-smart-film</loc>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/blog-pdlc.webp</image:loc>
+      <image:title>What is PDLC Smart Film</image:title>
+      <image:caption>PDLC smart film technology explanation and working principle</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.aysentglass.com/blog/smart-film-vs-smart-glass</loc>
+    <image:image>
+      <image:loc>https://www.aysentglass.com/images/blog-compare.webp</image:loc>
+      <image:title>Smart Film vs Smart Glass Comparison</image:title>
+      <image:caption>Comparison of self-adhesive smart film versus laminated smart glass</image:caption>
+    </image:image>
+  </url>
+</urlset>

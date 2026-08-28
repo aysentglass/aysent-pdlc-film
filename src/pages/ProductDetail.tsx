@@ -14,12 +14,14 @@ export default function ProductDetail() {
   const { slug } = useParams();
   const product = PRODUCTS.find((p) => p.slug === slug);
 
-  useSeo(
-    product
+  useSeo({
+    title: product
       ? `${product.name} | Switchable Privacy Film Manufacturer — AYSENT SMART FILM`
       : "Product — AYSENT SMART FILM",
-    product ? `${product.short} Factory-direct supply from AYSENT SMART FILM with low MOQ, OEM/ODM customization and worldwide shipping.` : ""
-  );
+    description: product ? `${product.short} Factory-direct supply from AYSENT SMART FILM with low MOQ, OEM/ODM customization and worldwide shipping.` : "",
+    image: product?.image,
+    type: "product",
+  });
 
   if (!product) return <Navigate to="/products" replace />;
 

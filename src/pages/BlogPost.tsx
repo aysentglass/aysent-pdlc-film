@@ -13,10 +13,12 @@ export default function BlogPost() {
   const { slug } = useParams();
   const post = BLOG_POSTS.find((p) => p.slug === slug);
 
-  useSeo(
-    post ? `${post.title} — AYSENT SMART FILM` : "Blog — AYSENT SMART FILM",
-    post?.excerpt ?? ""
-  );
+  useSeo({
+    title: post ? `${post.title} — AYSENT SMART FILM` : "Blog — AYSENT SMART FILM",
+    description: post?.excerpt ?? "",
+    image: post?.image,
+    type: "article",
+  });
 
   if (!post) return <Navigate to="/blog" replace />;
 

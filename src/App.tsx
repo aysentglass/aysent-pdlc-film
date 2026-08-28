@@ -4,7 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Home from "@/pages/Home";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
-import { OrganizationSchema } from "@/components/Schema";
+import { OrganizationSchema, LocalBusinessSchema } from "@/components/Schema";
 
 // Lazy-load non-home routes so they are fetched only when navigated to.
 // This keeps the initial JS bundle small and improves first-paint speed.
@@ -17,6 +17,7 @@ const Blog = lazy(() => import("@/pages/Blog"));
 const BlogPost = lazy(() => import("@/pages/BlogPost"));
 const Contact = lazy(() => import("@/pages/Contact"));
 const Admin = lazy(() => import("@/pages/Admin"));
+const NotFound = lazy(() => import("@/pages/NotFound"));
 
 /** Minimal loading state shown while a lazy route chunk is being fetched. */
 function RouteFallback() {
@@ -47,6 +48,7 @@ export default function App() {
   return (
     <div className="flex min-h-screen flex-col bg-white text-[#1B2A3A]">
       <OrganizationSchema />
+      <LocalBusinessSchema />
       <ScrollManager />
       <Navbar />
       <main className="flex-1 pt-16">
@@ -62,7 +64,7 @@ export default function App() {
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/admin" element={<Admin />} />
-            <Route path="*" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </main>

@@ -84,6 +84,26 @@ const PRODUCT_DESCS = {
     "Complete range of smart film accessories: power transformers (36V/48V/60V), remote controls, Wi-Fi app modules, dimming controllers and professional installation tool kits.",
 };
 
+const PRODUCT_IMAGES = {
+  "pdlc-smart-film": "https://www.aysentglass.com/images/product-pdlc.webp",
+  "self-adhesive-smart-film": "https://www.aysentglass.com/images/product-adhesive.webp",
+  "switchable-laminated-glass": "https://www.aysentglass.com/images/product-laminated.webp",
+  "smart-film-accessories": "https://www.aysentglass.com/images/product-accessories.webp",
+};
+
+const BLOG_IMAGES = {
+  "what-is-pdlc-smart-film": "https://www.aysentglass.com/images/blog-pdlc.webp",
+  "smart-film-vs-smart-glass": "https://www.aysentglass.com/images/blog-compare.webp",
+  "how-to-install-self-adhesive-smart-film": "https://www.aysentglass.com/images/blog-pdlc.webp",
+  "pdlc-smart-film-cost-pricing-guide": "https://www.aysentglass.com/images/blog-compare.webp",
+  "pdlc-smart-film-installation-cost": "https://www.aysentglass.com/images/blog-pdlc.webp",
+  "smart-film-for-office-partitions": "https://www.aysentglass.com/images/app-office.webp",
+  "switchable-glass-projection-screen": "https://www.aysentglass.com/images/blog-pdlc.webp",
+  "pdlc-film-lifespan": "https://www.aysentglass.com/images/blog-compare.webp",
+  "self-adhesive-vs-laminated-pdlc-film": "https://www.aysentglass.com/images/blog-compare.webp",
+  "smart-film-for-hotel-bathrooms": "https://www.aysentglass.com/images/app-hotel.webp",
+};
+
 const BLOG_SLUGS = [
   "what-is-pdlc-smart-film",
   "smart-film-vs-smart-glass",
@@ -140,6 +160,7 @@ function buildAllRoutes() {
       path: `/products/${slug}`,
       title: PRODUCT_TITLES[slug],
       description: PRODUCT_DESCS[slug],
+      image: PRODUCT_IMAGES[slug],
     });
   }
   for (const slug of BLOG_SLUGS) {
@@ -147,6 +168,7 @@ function buildAllRoutes() {
       path: `/blog/${slug}`,
       title: BLOG_TITLES[slug],
       description: BLOG_DESCS[slug],
+      image: BLOG_IMAGES[slug],
     });
   }
   return routes;
@@ -240,6 +262,14 @@ async function main() {
         );
       }
 
+      // Set robots meta
+      if (/<meta name="robots"[^>]*>/.test(html)) {
+        html = html.replace(
+          /<meta name="robots"[^>]*>/,
+          `<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />`
+        );
+      }
+
       // Add canonical link
       const canonical = `https://www.aysentglass.com${route.path === "/" ? "/" : route.path}`;
       if (!/<link rel="canonical"/.test(html)) {
@@ -253,6 +283,39 @@ async function main() {
           `<link rel="canonical" href="${canonical}" />`
         );
       }
+
+      // Open Graph tags
+      const ogImage = route.image || "https://www.aysentglass.com/images/hero-on.webp";
+      html = html.replace(
+        /<meta property="og:title"[^>]*>/,
+        `<meta property="og:title" content="${route.title}" />`
+      );
+      html = html.replace(
+        /<meta property="og:description"[^>]*>/,
+        `<meta property="og:description" content="${route.description}" />`
+      );
+      html = html.replace(
+        /<meta property="og:url"[^>]*>/,
+        `<meta property="og:url" content="${canonical}" />`
+      );
+      html = html.replace(
+        /<meta property="og:image"[^>]*>/,
+        `<meta property="og:image" content="${ogImage}" />`
+      );
+
+      // Twitter Card tags
+      html = html.replace(
+        /<meta name="twitter:title"[^>]*>/,
+        `<meta name="twitter:title" content="${route.title}" />`
+      );
+      html = html.replace(
+        /<meta name="twitter:description"[^>]*>/,
+        `<meta name="twitter:description" content="${route.description}" />`
+      );
+      html = html.replace(
+        /<meta name="twitter:image"[^>]*>/,
+        `<meta name="twitter:image" content="${ogImage}" />`
+      );
 
       // Determine output path
       const outPath =

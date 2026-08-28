@@ -1,13 +1,35 @@
 # AYSENT SMART FILM — robots.txt
 # Domain: aysentglass.com
+# Optimized for Google, Bing, Yandex
 
 User-agent: *
 Allow: /
 Disallow: /admin
 Disallow: /api/
 
-# Block tracking parameter URLs
+# Block tracking parameter URLs to avoid duplicate content
 Disallow: /*?*ref=
 Disallow: /*?*utm_
+Disallow: /*?*gclid
+Disallow: /*?*fbclid
 
+# Allow specific crawlers full access
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+# Sitemaps — declare for all major search engines
 Sitemap: https://www.aysentglass.com/sitemap.xml
+Sitemap: https://www.aysentglass.com/sitemap-images.xml

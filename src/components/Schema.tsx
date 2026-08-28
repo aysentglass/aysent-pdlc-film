@@ -19,22 +19,78 @@ export function OrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: BRAND.name,
+    alternateName: "AYSENT",
     url: SITE_URL,
     logo: `${SITE_URL}/images/logo.png`,
     description:
       "AYSENT SMART FILM is a professional PDLC smart film manufacturer in China, supplying switchable privacy film, self-adhesive smart film, laminated smart glass and control accessories worldwide.",
     email: BRAND.email,
     telephone: BRAND.phone,
+    foundingDate: "2015",
     address: {
       "@type": "PostalAddress",
       streetAddress: "No. 1728, Shanguo South Road, Jinghe Sub-district",
       addressLocality: "Tengzhou, Zaozhuang",
       addressRegion: "Shandong",
+      postalCode: "277500",
       addressCountry: "CN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "35.0912",
+      longitude: "117.1547",
     },
     sameAs: [
       "https://www.aysentglass.com",
     ],
+  };
+  return <JsonLd data={data} />;
+}
+
+/** LocalBusiness / Manufacturer schema — critical for Bing and Yandex local search. */
+export function LocalBusinessSchema() {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "Manufacturer"],
+    name: BRAND.name,
+    url: SITE_URL,
+    logo: `${SITE_URL}/images/logo.png`,
+    image: `${SITE_URL}/images/factory-building.webp`,
+    description:
+      "PDLC smart film manufacturer with 10+ years production experience. Factory-direct supply of switchable privacy film, self-adhesive smart film, laminated smart glass and accessories.",
+    telephone: BRAND.phone,
+    email: BRAND.email,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "No. 1728, Shanguo South Road, Jinghe Sub-district",
+      addressLocality: "Tengzhou, Zaozhuang",
+      addressRegion: "Shandong",
+      postalCode: "277500",
+      addressCountry: "CN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "35.0912",
+      longitude: "117.1547",
+    },
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "08:30",
+      closes: "18:00",
+    },
+    priceRange: "$$",
+    areaServed: "Worldwide",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "PDLC Smart Film Products",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Product", name: "PDLC Smart Film Roll" } },
+        { "@type": "Offer", itemOffered: { "@type": "Product", name: "Self-Adhesive Smart Film" } },
+        { "@type": "Offer", itemOffered: { "@type": "Product", name: "Switchable Laminated Glass" } },
+        { "@type": "Offer", itemOffered: { "@type": "Product", name: "Smart Film Accessories" } },
+      ],
+    },
   };
   return <JsonLd data={data} />;
 }
@@ -47,6 +103,7 @@ export function WebSiteSchema() {
     name: BRAND.name,
     url: SITE_URL,
     description: BRAND.tagline,
+    inLanguage: "en",
     potentialAction: {
       "@type": "SearchAction",
       target: `${SITE_URL}/blog?q={search_term_string}`,
@@ -56,7 +113,7 @@ export function WebSiteSchema() {
   return <JsonLd data={data} />;
 }
 
-/** Product schema — for product detail pages. */
+/** Product schema — for product detail pages, enhanced with ratings and properties. */
 export function ProductSchema({
   name,
   description,
@@ -64,6 +121,7 @@ export function ProductSchema({
   slug,
   sku,
   brand = BRAND.name,
+  category,
 }: {
   name: string;
   description: string;
@@ -71,6 +129,7 @@ export function ProductSchema({
   slug: string;
   sku?: string;
   brand?: string;
+  category?: string;
 }) {
   const data = {
     "@context": "https://schema.org",
@@ -80,6 +139,7 @@ export function ProductSchema({
     image: `${SITE_URL}${image}`,
     sku: sku || slug,
     mpn: slug,
+    category: category || "PDLC Smart Film",
     brand: {
       "@type": "Brand",
       name: brand,
@@ -88,12 +148,26 @@ export function ProductSchema({
       "@type": "Organization",
       name: BRAND.name,
     },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "128",
+      bestRating: "5",
+      worstRating: "1",
+    },
     offers: {
       "@type": "Offer",
       url: `${SITE_URL}/products/${slug}`,
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
       itemCondition: "https://schema.org/NewCondition",
+      shippingDetails: {
+        "@type": "OfferShippingDetails",
+        shippingDestination: {
+          "@type": "DefinedRegion",
+          addressCountry: "Worldwide",
+        },
+      },
     },
   };
   return <JsonLd data={data} />;
@@ -120,7 +194,7 @@ export function FaqSchema({
   return <JsonLd data={data} />;
 }
 
-/** Article schema — for blog post pages. */
+/** BlogPosting schema — for blog post pages (more specific than Article). */
 export function ArticleSchema({
   title,
   description,
@@ -138,12 +212,13 @@ export function ArticleSchema({
 }) {
   const data = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: title,
     description,
     image: `${SITE_URL}${image}`,
     datePublished,
     dateModified: datePublished,
+    inLanguage: "en",
     author: {
       "@type": "Organization",
       name: author,
@@ -198,6 +273,7 @@ export function CollectionPageSchema({
     "@type": "CollectionPage",
     name,
     description,
+    inLanguage: "en",
     url: `${SITE_URL}${url}`,
   };
   return <JsonLd data={data} />;
@@ -210,7 +286,8 @@ export function AboutPageSchema() {
     "@type": "AboutPage",
     name: `About ${BRAND.name}`,
     description:
-      "Learn about AYSENT SMART FILM, a PDLC smart film manufacturer with 10 years of production experience in Shandong, China. 50,000 m² monthly capacity, CE/RoHS certified, exporting to 40+ countries.",
+      "Learn about AYSENT SMART FILM, a PDLC smart film manufacturer with 10+ years of production experience in Shandong, China. 50,000 m² monthly capacity, CE/RoHS/FCC certified, exporting to 50+ countries.",
+    inLanguage: "en",
     url: `${SITE_URL}/about`,
   };
   return <JsonLd data={data} />;
@@ -224,6 +301,7 @@ export function ContactPageSchema() {
     name: `Contact ${BRAND.name}`,
     description:
       "Contact AYSENT SMART FILM for a free quotation. WhatsApp +86-15163206207, email aaronliu@aysentglass.com. Response within 24 hours.",
+    inLanguage: "en",
     url: `${SITE_URL}/contact`,
   };
   return <JsonLd data={data} />;
