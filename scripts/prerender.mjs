@@ -94,13 +94,13 @@ const PRODUCT_IMAGES = {
 const BLOG_IMAGES = {
   "what-is-pdlc-smart-film": "https://www.aysentglass.com/images/blog-pdlc.webp",
   "smart-film-vs-smart-glass": "https://www.aysentglass.com/images/blog-compare.webp",
-  "how-to-install-self-adhesive-smart-film": "https://www.aysentglass.com/images/blog-pdlc.webp",
-  "pdlc-smart-film-cost-pricing-guide": "https://www.aysentglass.com/images/blog-compare.webp",
-  "pdlc-smart-film-installation-cost": "https://www.aysentglass.com/images/blog-pdlc.webp",
+  "how-to-install-self-adhesive-smart-film": "https://www.aysentglass.com/images/product-adhesive.webp",
+  "pdlc-smart-film-cost-pricing-guide": "https://www.aysentglass.com/images/factory-cutting.webp",
+  "pdlc-smart-film-installation-cost": "https://www.aysentglass.com/images/factory-lamination.webp",
   "smart-film-for-office-partitions": "https://www.aysentglass.com/images/app-office.webp",
-  "switchable-glass-projection-screen": "https://www.aysentglass.com/images/blog-pdlc.webp",
-  "pdlc-film-lifespan": "https://www.aysentglass.com/images/blog-compare.webp",
-  "self-adhesive-vs-laminated-pdlc-film": "https://www.aysentglass.com/images/blog-compare.webp",
+  "switchable-glass-projection-screen": "https://www.aysentglass.com/images/app-mall.webp",
+  "pdlc-film-lifespan": "https://www.aysentglass.com/images/factory-qc.webp",
+  "self-adhesive-vs-laminated-pdlc-film": "https://www.aysentglass.com/images/band-oem.webp",
   "smart-film-for-hotel-bathrooms": "https://www.aysentglass.com/images/app-hotel.webp",
   "pdlc-vs-spd-vs-electrochromic-glass": "https://www.aysentglass.com/images/band-switch.webp",
 };
@@ -120,40 +120,40 @@ const BLOG_SLUGS = [
 ];
 
 const BLOG_TITLES = {
-  "what-is-pdlc-smart-film": "What Is PDLC Smart Film? Working Principle, Benefits & Buying Guide — AYSENT",
-  "smart-film-vs-smart-glass": "Smart Film vs Smart Glass: Cost, Installation & Use Cases Compared — AYSENT",
-  "how-to-install-self-adhesive-smart-film": "How to Install Self-Adhesive Smart Film: Step-by-Step Guide — AYSENT",
-  "pdlc-smart-film-cost-pricing-guide": "PDLC Smart Film Cost & Pricing Guide: Budget Breakdown — AYSENT",
-  "pdlc-smart-film-installation-cost": "PDLC Smart Film Installation Cost: Complete 2026 Guide — AYSENT",
-  "smart-film-for-office-partitions": "Smart Film for Office Partitions: Design & Spec Guide — AYSENT",
-  "switchable-glass-projection-screen": "Switchable Glass as Projection Screen: Complete Guide — AYSENT",
-  "pdlc-film-lifespan": "PDLC Film Lifespan: How Long Does Smart Film Last? — AYSENT",
-  "self-adhesive-vs-laminated-pdlc-film": "Self-Adhesive vs Laminated PDLC Film: Which to Choose? — AYSENT",
-  "smart-film-for-hotel-bathrooms": "Smart Film for Hotel Bathrooms: Privacy & Design Guide — AYSENT",
-  "pdlc-vs-spd-vs-electrochromic-glass": "PDLC vs SPD vs Electrochromic Glass: Complete Technology Comparison — AYSENT",
+  "what-is-pdlc-smart-film": "What Is PDLC Smart Film? Working Principle, Benefits and Buying Guide",
+  "smart-film-vs-smart-glass": "Smart Film vs. Smart Glass: Which Privacy Solution Fits Your Project?",
+  "how-to-install-self-adhesive-smart-film": "How to Install Self-Adhesive Smart Film: A Step-by-Step Guide",
+  "pdlc-smart-film-cost-pricing-guide": "PDLC Smart Film Cost & Pricing Guide: What Affects Your Project Budget",
+  "pdlc-smart-film-installation-cost": "PDLC Smart Film Installation Cost: Complete 2026 Guide",
+  "smart-film-for-office-partitions": "Smart Film for Office Partitions: Design & Spec Guide",
+  "switchable-glass-projection-screen": "Switchable Glass as Projection Screen: Complete Guide",
+  "pdlc-film-lifespan": "PDLC Film Lifespan: How Long Does Smart Film Last?",
+  "self-adhesive-vs-laminated-pdlc-film": "Self-Adhesive vs Laminated PDLC Film: Which to Choose?",
+  "smart-film-for-hotel-bathrooms": "Smart Film for Hotel Bathrooms: Privacy & Design Guide",
+  "pdlc-vs-spd-vs-electrochromic-glass": "PDLC vs SPD vs Electrochromic Glass: Complete Technology Comparison",
 };
 
 const BLOG_DESCS = {
   "what-is-pdlc-smart-film":
-    "Complete introduction to PDLC smart glass film: how it switches from frosted to transparent, key specs, applications and what to check before buying from a manufacturer.",
+    "A complete introduction to PDLC smart glass film: how it switches from frosted to transparent, key technical specs, application scenarios and what to check before buying from a smart film manufacturer.",
   "smart-film-vs-smart-glass":
-    "Compare cost, installation, durability and use cases of self-adhesive switchable film versus laminated switchable glass to choose the right privacy solution.",
+    "Smart film or smart glass? Compare cost, installation, durability and ideal use cases of self-adhesive switchable film versus laminated switchable glass to choose the right privacy solution for your project.",
   "how-to-install-self-adhesive-smart-film":
-    "Step-by-step installation guide for self-adhesive PDLC switchable film: tools needed, six steps from measuring to wiring, common mistakes to avoid.",
+    "A complete installation guide for self-adhesive PDLC switchable film: tools needed, six steps from measuring to wiring, common mistakes to avoid, and when to call a professional installer.",
   "pdlc-smart-film-cost-pricing-guide":
-    "Understand PDLC smart film pricing: film grade, size, control system, installation and shipping. Compare costs against smart glass and curtains, plus five budget-saving tips.",
+    "Understand how PDLC smart film is priced: film grade, size, control system, installation and shipping. Compare total costs against smart glass and curtains, and learn five ways to reduce your project budget without cutting quality.",
   "pdlc-smart-film-installation-cost":
-    "Detailed breakdown of PDLC smart film installation costs in 2026: material pricing, labor rates by region, transformer and control costs, hidden fees, and money-saving tips.",
+    "A detailed breakdown of PDLC smart film installation costs in 2026: material pricing, labor rates by region, transformer and control costs, hidden fees, and money-saving tips for your project.",
   "smart-film-for-office-partitions":
-    "Everything architects and facility managers need to know about specifying PDLC smart film for office partitions: design considerations, technical specs, privacy compliance and cost.",
+    "Everything architects and facility managers need to know about specifying PDLC smart film for office partitions: design considerations, technical specs, privacy compliance, cost, and real project examples.",
   "switchable-glass-projection-screen":
-    "How PDLC switchable glass works as a rear-projection screen: brightness, resolution, viewing angles, projector specs, installation tips, and creative applications.",
+    "How PDLC switchable glass works as a rear-projection screen: brightness, resolution, viewing angles, projector specs, installation tips, and creative applications for offices, retail and hospitality.",
   "pdlc-film-lifespan":
     "A detailed look at PDLC smart film lifespan: rated hours, real-world longevity, factors that shorten or extend life, warranty coverage, and when to replace your film.",
   "self-adhesive-vs-laminated-pdlc-film":
-    "Detailed comparison of self-adhesive PDLC film versus factory-laminated switchable glass: cost, durability, installation, ideal applications, and a decision framework.",
+    "A detailed comparison of self-adhesive PDLC film versus factory-laminated switchable glass: cost, durability, installation, ideal applications, and a decision framework for your project.",
   "smart-film-for-hotel-bathrooms":
-    "Why hotels are switching to PDLC smart film for bathroom privacy: guest experience, design flexibility, energy savings, installation tips, and ROI analysis for hotel owners.",
+    "Why hotels are switching to PDLC smart film for bathroom privacy: guest experience, design flexibility, energy savings, installation tips, and ROI analysis for hotel owners and designers.",
   "pdlc-vs-spd-vs-electrochromic-glass":
     "Compare PDLC vs SPD vs electrochromic switchable glass: switching speed, dimming capability, power consumption, cost, lifespan and best applications. Full 2026 guide for architects, contractors and buyers.",
 };
