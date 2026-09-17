@@ -102,6 +102,7 @@ const BLOG_IMAGES = {
   "pdlc-film-lifespan": "https://www.aysentglass.com/images/blog-compare.webp",
   "self-adhesive-vs-laminated-pdlc-film": "https://www.aysentglass.com/images/blog-compare.webp",
   "smart-film-for-hotel-bathrooms": "https://www.aysentglass.com/images/app-hotel.webp",
+  "pdlc-vs-spd-vs-electrochromic-glass": "https://www.aysentglass.com/images/band-switch.webp",
 };
 
 const BLOG_SLUGS = [
@@ -115,6 +116,7 @@ const BLOG_SLUGS = [
   "pdlc-film-lifespan",
   "self-adhesive-vs-laminated-pdlc-film",
   "smart-film-for-hotel-bathrooms",
+  "pdlc-vs-spd-vs-electrochromic-glass",
 ];
 
 const BLOG_TITLES = {
@@ -128,6 +130,7 @@ const BLOG_TITLES = {
   "pdlc-film-lifespan": "PDLC Film Lifespan: How Long Does Smart Film Last? — AYSENT",
   "self-adhesive-vs-laminated-pdlc-film": "Self-Adhesive vs Laminated PDLC Film: Which to Choose? — AYSENT",
   "smart-film-for-hotel-bathrooms": "Smart Film for Hotel Bathrooms: Privacy & Design Guide — AYSENT",
+  "pdlc-vs-spd-vs-electrochromic-glass": "PDLC vs SPD vs Electrochromic Glass: Complete Technology Comparison — AYSENT",
 };
 
 const BLOG_DESCS = {
@@ -151,6 +154,8 @@ const BLOG_DESCS = {
     "Detailed comparison of self-adhesive PDLC film versus factory-laminated switchable glass: cost, durability, installation, ideal applications, and a decision framework.",
   "smart-film-for-hotel-bathrooms":
     "Why hotels are switching to PDLC smart film for bathroom privacy: guest experience, design flexibility, energy savings, installation tips, and ROI analysis for hotel owners.",
+  "pdlc-vs-spd-vs-electrochromic-glass":
+    "Compare PDLC vs SPD vs electrochromic switchable glass: switching speed, dimming capability, power consumption, cost, lifespan and best applications. Full 2026 guide for architects, contractors and buyers.",
 };
 
 function buildAllRoutes() {

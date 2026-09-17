@@ -1631,6 +1631,142 @@ export const BLOG_POSTS: BlogPost[] = [
       { question: "What is the warranty for hotel smart film installations?", answer: "AYSENT SMART FILM offers a 5-year global warranty on PDLC smart film and laminated glass. For high-volume hotel contracts (50+ rooms), we offer extended warranty packages and priority technical support. Electronic accessories carry a 2-year warranty." },
     ],
   },
+  {
+    slug: "pdlc-vs-spd-vs-electrochromic-glass",
+    title: "PDLC vs SPD vs Electrochromic Glass: Complete Technology Comparison",
+    excerpt:
+      "Compare PDLC vs SPD vs electrochromic switchable glass: switching speed, dimming capability, power consumption, cost, lifespan and best applications. Full 2026 guide for architects, contractors and buyers.",
+    date: "September 17, 2026",
+    readTime: "8 min read",
+    image: "/images/band-switch.webp",
+    imageAlt: "PDLC smart film switching between transparent and frosted states, representing switchable glass technology comparison",
+    sections: [
+      {
+        paragraphs: [
+          "When specifying switchable glass for a building project, buyers quickly discover that not all 'smart glass' is the same. Three distinct technologies dominate the market — PDLC, SPD and electrochromic — each with different working principles, performance characteristics, price points and ideal applications. Choosing the wrong technology can mean paying too much, waiting too long for the glass to switch, or ending up with a product that cannot meet the project's functional requirements. This guide compares PDLC vs SPD vs electrochromic glass across every critical dimension, so you can specify the right switchable glass technology with confidence.",
+          "Whether you are an architect designing a curtain wall, a contractor pricing an office fit-out, or a homeowner planning a luxury renovation, understanding the differences between these three switchable glass technologies is the first step toward a successful project.",
+        ],
+      },
+      {
+        heading: "What Are the Three Main Switchable Glass Technologies?",
+        paragraphs: [
+          "All three technologies achieve the same goal — controlling the transparency of glass on demand — but they use fundamentally different physical mechanisms. PDLC relies on liquid crystal light scattering, SPD uses suspended particle alignment, and electrochromic glass works through an electrochemical reaction that changes the material's color. These differences drive everything from switching speed to long-term durability.",
+        ],
+        list: [
+          "PDLC (Polymer Dispersed Liquid Crystal): liquid crystal droplets scatter light when off, align to transmit light when on — produces a frosted-to-clear transition.",
+          "SPD (Suspended Particle Device): microscopic rod-shaped particles align to transmit light when energized, randomize to absorb light when off — produces a clear-to-dark (black) transition.",
+          "Electrochromic (EC): an applied voltage triggers an electrochemical reaction that injects ions into a coating, changing it from transparent to deeply tinted — produces a clear-to-blue/gray transition.",
+        ],
+      },
+      {
+        heading: "PDLC (Polymer Dispersed Liquid Crystal) — Instant Switching",
+        paragraphs: [
+          "PDLC is the most widely adopted switchable glass technology for interior applications. A PDLC smart film consists of microscopic liquid crystal droplets dispersed within a polymer matrix, sandwiched between two transparent conductive ITO layers. The film is typically 0.38 mm thick and can be supplied in roll form for glass lamination, or with a self-adhesive backing for direct application onto existing glass.",
+          "In the OFF state (no power), the liquid crystal droplets are randomly oriented. Light passing through the film is scattered in all directions, so the film appears milky white or frosted — providing complete privacy while still letting soft, diffused light through. When an AC voltage is applied (typically 48–65V, nominal 60V), the liquid crystal molecules align with the electric field. Light can then pass straight through with minimal scattering, and the film becomes transparent in less than 0.1 seconds.",
+        ],
+        list: [
+          "Switching speed: less than 0.1 seconds — the fastest of all three technologies.",
+          "Dimming: primarily ON/OFF two-state; some controllers offer limited step dimming, but true continuous dimming is not native to PDLC.",
+          "ON-state transmittance: 89.5–92% (T7 grade, parallel light) — the clearest of the three when fully on.",
+          "OFF-state appearance: frosted white (milky), not dark — provides privacy while maintaining daylight.",
+          "Power consumption: 3.2 W/m2/h — only consumed when the film is in the transparent (ON) state; the frosted (OFF) state uses zero power.",
+          "Relative cost: lowest of the three — typically 40–60% cheaper than SPD and 30–50% cheaper than electrochromic for comparable areas.",
+          "Lifespan: 15+ years (lab tested, ~100,000 operating hours), backed by a 5-year warranty from quality manufacturers.",
+          "Best applications: office partitions, conference rooms, hotel bathrooms, residential windows, retail displays, rear-projection screens, and interior doors.",
+        ],
+        tail: [
+          "PDLC is the technology manufactured and supplied by AYSENT SMART FILM. It is available as PDLC smart film roll, self-adhesive smart film for retrofit, and switchable laminated glass for new construction.",
+        ],
+      },
+      {
+        heading: "SPD (Suspended Particle Device) — Continuous Dimming",
+        paragraphs: [
+          "SPD technology uses microscopic rod-shaped particles suspended in a liquid crystal matrix within a film interlayer. When no voltage is applied, the particles are randomly oriented and absorb light, making the glass appear very dark — nearly black. When voltage is applied, the particles align in the direction of the electric field, allowing light to pass through. By varying the voltage, the degree of alignment can be precisely controlled, enabling continuous, stepless dimming from fully clear to nearly opaque.",
+          "SPD is the technology of choice for automotive sunroofs — Mercedes-Benz, Porsche and Toyota have all used SPD glass in production vehicles — because it allows occupants to precisely control the amount of sunlight entering the cabin. In architectural applications, SPD is specified for high-end residential skylights, luxury yacht windows, and any project where precise, continuous light control is more important than absolute privacy.",
+        ],
+        list: [
+          "Switching speed: 1–3 seconds — slower than PDLC but much faster than electrochromic.",
+          "Dimming: true continuous, stepless dimming from 1% to 90% transmittance — the most precise light control of the three.",
+          "ON-state transmittance: 85–90% — slightly less clear than PDLC due to particle absorption.",
+          "OFF-state appearance: very dark gray to black — blocks light almost completely, but does not provide the frosted daylight effect of PDLC.",
+          "Power consumption: 5–10 W/m2/h — higher than PDLC because the particles require continuous power to stay aligned.",
+          "Operating voltage: 100–120V AC — higher voltage than PDLC, requiring different transformer specifications.",
+          "Relative cost: highest of the three — typically 2–3 times the cost of PDLC for comparable area.",
+          "Lifespan: 10–15 years, with performance gradually degrading over time as the suspension fluid ages.",
+          "Best applications: automotive sunroofs, luxury residential skylights, yacht windows, high-end retail, and any project requiring precise, continuous daylight control.",
+        ],
+      },
+      {
+        heading: "Electrochromic (EC) — Low-Power Tinting",
+        paragraphs: [
+          "Electrochromic glass works through an electrochemical reaction. A thin electrochromic coating (typically tungsten oxide) is deposited onto the glass surface. When a low DC voltage (1–5V) is applied, lithium ions are injected into the coating, causing it to change color from transparent to a deep blue or gray. When the voltage is reversed, the ions are extracted and the glass returns to clear. The key advantage of electrochromic technology is its memory effect: once the desired tint level is reached, no further power is required to maintain it — the glass stays tinted until a new voltage signal is sent.",
+          "Electrochromic glass is the dominant technology for exterior architectural applications. It is widely used in building curtain walls, skylights and exterior windows because it provides solar heat gain control (SHGC reduction) and glare reduction, reducing building energy consumption for cooling and lighting. Boeing's 787 Dreamliner uses electrochromic windows instead of physical shades, and major manufacturers like SageGlass and View Glass have deployed EC glass in thousands of commercial buildings worldwide.",
+        ],
+        list: [
+          "Switching speed: 30 seconds to several minutes — the slowest of the three, as the electrochemical reaction takes time to propagate across large panels.",
+          "Dimming: continuous, stepless dimming — but the range is narrower than SPD, typically from 10–70% transmittance.",
+          "ON-state transmittance: 50–70% — electrochromic glass never achieves full clarity; even in the clear state there is a slight tint.",
+          "OFF-state appearance: deep blue or dark gray — reduces light and heat, but does not provide complete privacy (objects behind the glass remain somewhat visible).",
+          "Power consumption: near-zero in steady state — power is only consumed during the switching transition, making EC the most energy-efficient technology for static tint applications.",
+          "Operating voltage: 1–5V DC — very low voltage, safe and simple to wire.",
+          "Relative cost: high — typically 1.5–2 times the cost of PDLC, but lower than SPD for large exterior installations.",
+          "Lifespan: rated for ~100,000 switching cycles; after extensive cycling, the contrast ratio may degrade and the glass may not return fully to clear.",
+          "Best applications: building curtain walls, exterior windows, skylights, aircraft windows, and any project where solar heat gain control and energy savings are the primary goals.",
+        ],
+      },
+      {
+        heading: "Head-to-Head Comparison",
+        paragraphs: [
+          "The following comparison summarizes the key specifications of all three switchable glass technologies. Use this as a quick reference when evaluating which technology fits your project requirements.",
+        ],
+        list: [
+          "Switching speed — PDLC: under 0.1s (instant) | SPD: 1–3s (fast) | Electrochromic: 30s–minutes (slow).",
+          "Dimming capability — PDLC: ON/OFF (limited step dimming) | SPD: continuous stepless (1–90%) | Electrochromic: continuous (10–70%).",
+          "ON-state transmittance — PDLC: 89.5–92% (clearest) | SPD: 85–90% | Electrochromic: 50–70% (slight tint always).",
+          "OFF-state appearance — PDLC: frosted white (privacy + daylight) | SPD: dark black (light blocking) | Electrochromic: deep blue/gray (heat reduction).",
+          "Power consumption — PDLC: 3.2 W/m2/h (only when ON) | SPD: 5–10 W/m2/h (continuous) | Electrochromic: near-zero (only when switching).",
+          "Operating voltage — PDLC: 48–65V AC | SPD: 100–120V AC | Electrochromic: 1–5V DC.",
+          "Relative cost — PDLC: lowest | SPD: highest | Electrochromic: high.",
+          "Lifespan — PDLC: 15+ years / 100,000 hours | SPD: 10–15 years | Electrochromic: ~100,000 switching cycles.",
+          "Exterior suitability — PDLC: requires laminated glass for weather protection | SPD: suitable for exterior with proper sealing | Electrochromic: designed specifically for exterior use.",
+          "Privacy performance — PDLC: excellent (complete opacity when OFF) | SPD: very good (dark but slightly translucent) | Electrochromic: moderate (tinted but not fully private).",
+          "Projection capability — PDLC: excellent rear-projection screen in OFF state | SPD: not suitable | Electrochromic: not suitable.",
+        ],
+      },
+      {
+        heading: "Which Technology Should You Choose?",
+        paragraphs: [
+          "There is no universally best switchable glass technology — the right choice depends entirely on your project's specific requirements. Use the following decision guide to narrow down your options.",
+        ],
+        list: [
+          "Choose PDLC if: you need instant switching (under 1 second), the primary goal is interior privacy, you want the frosted-white daylight effect, you need a rear-projection screen, your budget is constrained, or the installation is primarily interior (partitions, doors, bathroom glass).",
+          "Choose SPD if: you need precise, continuous stepless dimming, you prefer a dark/black opaque state over frosted white, the application is automotive or marine, you are working on a high-end residential project with unlimited budget, or precise daylight harvesting is more important than absolute privacy.",
+          "Choose Electrochromic if: the installation is on exterior windows or curtain walls, your primary goal is solar heat gain reduction and energy savings, you want the glass to maintain its tint state without continuous power, you are designing a large-scale commercial building, or you are willing to accept slower switching in exchange for energy efficiency.",
+        ],
+        tail: [
+          "Many sophisticated projects combine multiple technologies. For example, a modern office building might use electrochromic glass on the exterior curtain wall for solar control, PDLC film on interior conference room partitions for instant privacy, and SPD glass on the executive boardroom skylight for precise daylight adjustment. The key is to match each technology to the application where it delivers the greatest value.",
+          "For the vast majority of interior privacy applications — office partitions, hotel bathrooms, residential doors, retail displays — PDLC offers the best balance of performance, speed, clarity and cost. It is the most proven, most widely deployed and most cost-effective switchable glass technology for interior use.",
+        ],
+      },
+      {
+        heading: "Conclusion",
+        paragraphs: [
+          "PDLC, SPD and electrochromic glass each represent a mature, proven approach to switchable glazing, but they are not interchangeable. PDLC delivers instant frosted-to-clear switching at the lowest cost, making it ideal for interior privacy and projection applications. SPD offers the most precise continuous dimming and a dark opaque state, at a premium price point, best suited to automotive and high-end residential projects. Electrochromic glass provides unmatched energy efficiency for exterior solar control, at the cost of slower switching and reduced clarity. For architects, contractors and buyers, the decision should always start with the application: what problem is the switchable glass solving, and which technology solves it most effectively at the right price?",
+          "AYSENT SMART FILM specializes in PDLC technology because it delivers the best value for the broadest range of interior privacy applications. We manufacture PDLC smart film rolls, self-adhesive retrofit film, and switchable laminated glass, with full OEM/ODM customization and worldwide shipping. If your project calls for PDLC switchable glass, contact us for a free quotation, technical specification support and complimentary A4 demo samples — we respond to every inquiry within 24 hours.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "What is the difference between PDLC, SPD and electrochromic glass?", answer: "PDLC uses liquid crystal droplets that scatter light when off and align to transmit light when on, producing a frosted-to-clear transition. SPD uses suspended rod-shaped particles that align to transmit light when energized and randomize to absorb light when off, producing a clear-to-dark-black transition. Electrochromic glass uses an electrochemical reaction that changes a coating's color from transparent to blue/gray when voltage is applied. All three achieve switchable transparency but through different physical mechanisms." },
+      { question: "Which switchable glass technology is best?", answer: "There is no single best technology — it depends on the application. PDLC is best for interior privacy, instant switching and budget-sensitive projects. SPD is best for precise continuous dimming and automotive/high-end residential use. Electrochromic is best for exterior windows and curtain walls where solar heat gain control and energy savings are the priority. For most interior privacy projects, PDLC offers the best balance of performance and cost." },
+      { question: "PDLC vs electrochromic cost: which is cheaper?", answer: "PDLC is significantly cheaper. PDLC smart film typically costs 30–50% less per square meter than electrochromic glass. PDLC also has lower installation costs because it can be applied as self-adhesive film onto existing glass, whereas electrochromic glass must be manufactured as a complete glazing unit. For interior applications, PDLC is almost always the more economical choice." },
+      { question: "How fast does each switchable glass technology switch?", answer: "PDLC is the fastest at under 0.1 seconds — essentially instant. SPD switches in 1–3 seconds. Electrochromic glass is the slowest, taking 30 seconds to several minutes to fully transition, especially on large panels where the electrochemical reaction takes time to propagate across the glass area." },
+      { question: "Can PDLC film dim continuously like SPD?", answer: "PDLC is primarily an ON/OFF two-state technology. Some advanced controllers offer limited step dimming (3–5 preset levels), but PDLC cannot achieve the true continuous, stepless dimming that SPD provides. If precise, infinitely variable light control is a core requirement, SPD is the more appropriate technology." },
+      { question: "Is electrochromic glass better than PDLC for exterior windows?", answer: "Yes, for exterior applications electrochromic glass is generally the better choice. It is specifically designed for outdoor use, provides solar heat gain control (reducing building cooling loads), and maintains its tint state without consuming power. PDLC can be used outdoors only when fully laminated between tempered glass panels, and it does not provide the same level of solar heat reduction. However, PDLC is far superior for interior privacy applications." },
+      { question: "What is the lifespan of each switchable glass technology?", answer: "PDLC has the longest rated lifespan at 15+ years (approximately 100,000 operating hours), backed by up to 5-year warranties from quality manufacturers. SPD typically lasts 10–15 years, with gradual performance degradation as the suspension fluid ages. Electrochromic glass is rated for approximately 100,000 switching cycles, after which the contrast ratio may begin to degrade and the glass may not return fully to its clear state." },
+      { question: "Can I use PDLC film for car windows and sunroofs?", answer: "PDLC film can be used in automotive applications such as RVs, camper vans and custom vehicle conversions, but it must meet automotive-grade temperature requirements (typically -40C to 85C) and be properly laminated for safety. For production vehicles, SPD is the more common choice for sunroofs because it offers continuous dimming and a darker appearance that passengers prefer. PDLC is better suited to vehicle interior partitions and privacy screens than exterior glazing." },
+    ],
+  },
 ];
 
 export const NAV_ITEMS = [
