@@ -107,7 +107,7 @@ export default function Home() {
               transition={{ duration: 0.7, ease: heroEase }}
             >
               <span className="h-px w-10 bg-[#7FB3E8]" aria-hidden="true" />
-              Smart Film Manufacturer · 10 Years Factory
+              Smart Film Manufacturer · 12 Years Factory
             </motion.p>
             <h1 className="mt-6 text-5xl font-extrabold leading-[1.0] tracking-tight sm:text-6xl md:text-7xl xl:text-8xl">
               {TITLE_LINES.map((line) => (

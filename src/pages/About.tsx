@@ -33,8 +33,8 @@ const MARKETS = [
 
 export default function About() {
   useSeo(
-    "About Us | 10-Year Smart Film Manufacturer & Factory — AYSENT SMART FILM",
-    "AYSENT SMART FILM is a CE, RoHS, FCC certified smart film manufacturer with INTERTEK test reports, 10+ years of experience, 50,000 m² monthly capacity and exports to 50+ countries under FOB/CIF/EXW terms."
+    "About Us | 12-Year Smart Film Manufacturer & Factory — AYSENT SMART FILM",
+    "AYSENT SMART FILM is a CE, RoHS, FCC certified smart film manufacturer with INTERTEK test reports, 12+ years of experience, 50,000 m² monthly capacity and exports to 50+ countries under FOB/CIF/EXW terms."
   );
 
   return (

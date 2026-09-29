@@ -36,7 +36,7 @@ const STATIC_ROUTES = [
     path: "/about",
     title: "About AYSENT SMART FILM | PDLC Smart Film Factory in China",
     description:
-      "AYSENT SMART FILM is a PDLC smart film manufacturer with 10 years of production experience in Shandong, China. 50,000 m² monthly capacity, CE/RoHS certified, exporting to 40+ countries.",
+      "AYSENT SMART FILM is a PDLC smart film manufacturer with 12 years of production experience in Shandong, China. 50,000 m² monthly capacity, CE/RoHS certified, exporting to 40+ countries.",
   },
   {
     path: "/faq",

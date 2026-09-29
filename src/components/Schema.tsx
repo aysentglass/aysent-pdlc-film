@@ -26,7 +26,7 @@ export function OrganizationSchema() {
       "AYSENT SMART FILM is a professional PDLC smart film manufacturer in China, supplying switchable privacy film, self-adhesive smart film, laminated smart glass and control accessories worldwide.",
     email: BRAND.email,
     telephone: BRAND.phone,
-    foundingDate: "2015",
+    foundingDate: "2014",
     address: {
       "@type": "PostalAddress",
       streetAddress: "No. 1728, Shanguo South Road, Jinghe Sub-district",
@@ -57,7 +57,7 @@ export function LocalBusinessSchema() {
     logo: `${SITE_URL}/images/logo.png`,
     image: `${SITE_URL}/images/factory-building.webp`,
     description:
-      "PDLC smart film manufacturer with 10+ years production experience. Factory-direct supply of switchable privacy film, self-adhesive smart film, laminated smart glass and accessories.",
+      "PDLC smart film manufacturer with 12+ years production experience. Factory-direct supply of switchable privacy film, self-adhesive smart film, laminated smart glass and accessories.",
     telephone: BRAND.phone,
     email: BRAND.email,
     address: {
@@ -286,7 +286,7 @@ export function AboutPageSchema() {
     "@type": "AboutPage",
     name: `About ${BRAND.name}`,
     description:
-      "Learn about AYSENT SMART FILM, a PDLC smart film manufacturer with 10+ years of production experience in Shandong, China. 50,000 m² monthly capacity, CE/RoHS/FCC certified, exporting to 50+ countries.",
+      "Learn about AYSENT SMART FILM, a PDLC smart film manufacturer with 12+ years of production experience in Shandong, China. 50,000 m² monthly capacity, CE/RoHS/FCC certified, exporting to 50+ countries.",
     inLanguage: "en",
     url: `${SITE_URL}/about`,
   };
