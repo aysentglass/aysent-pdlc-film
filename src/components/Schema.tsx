@@ -21,7 +21,7 @@ export function OrganizationSchema() {
     name: BRAND.name,
     alternateName: "AYSENT",
     url: SITE_URL,
-    logo: `${SITE_URL}/images/logo.png`,
+    logo: `${SITE_URL}/images/logo-large.png`,
     description:
       "AYSENT SMART FILM is a professional PDLC smart film manufacturer in China, supplying switchable privacy film, self-adhesive smart film, laminated smart glass and control accessories worldwide.",
     email: BRAND.email,
@@ -54,7 +54,7 @@ export function LocalBusinessSchema() {
     "@type": ["LocalBusiness", "Manufacturer"],
     name: BRAND.name,
     url: SITE_URL,
-    logo: `${SITE_URL}/images/logo.png`,
+    logo: `${SITE_URL}/images/logo-large.png`,
     image: `${SITE_URL}/images/factory-building.webp`,
     description:
       "PDLC smart film manufacturer with 12+ years production experience. Factory-direct supply of switchable privacy film, self-adhesive smart film, laminated smart glass and accessories.",
